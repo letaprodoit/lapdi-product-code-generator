@@ -41,7 +41,7 @@ Thank you for downloading the Product Code Generator (Joomla! Module) 1.0
 If you find any issues, please report them in the issue tracker on our website:
 http://lab.thesoftwarepeople.com/tracker/cscart-pcg
 
-## Copyright and license
+## COPYRIGHT AND LICENSE
 
 Copyright 2013 The Software People, LLC
 
