@@ -1,0 +1,12 @@
+*~
+.DS_Store
+.svn
+*.xml.full
+._*
+__MACOSX
+_notes
+_install_files
+_archive
+_design
+*.bak
+*.vpp~*
