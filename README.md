@@ -21,7 +21,7 @@ http://lab.thesoftwarepeople.com/tracker/wiki/cscart-pcg-MainPage
 * Open the basic/ folder and copy admin/ and customer/ folder to all the necessary skins INCLUDING basic
 * Open CS-Cart Administration Control Panel
 * Navigate to Settings-> Addons
-* Find the "The Software People: Product Code Generator for CS-Cart" addon and click "Install"
+* Find the "The Software People: Product Code Generator" addon and click "Install"
 * After Install, from the Addons listing click on Settings for "The Software People: Product Code Generator"
 * Update the settings based how you wish product codes to be generated.
 
@@ -37,7 +37,7 @@ http://lab.thesoftwarepeople.com/tracker/wiki/cscart-pcg-MainPage
 
 ## REPORTING ISSUES
 
-Thank you for downloading the Product Code Generator (Joomla! Module) 1.0
+Thank you for downloading the Product Code Generator for CS-Cart 1.0
 If you find any issues, please report them in the issue tracker on our website:
 http://lab.thesoftwarepeople.com/tracker/cscart-pcg
 
