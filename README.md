@@ -17,8 +17,7 @@ http://lab.thesoftwarepeople.com/tracker/wiki/cscart-pcg-MainPage
 
 * Download from repository
 * Unzip the zip file
-* Open addons/ folder and copy the tsp_the_bug_genie_for_cscart to [your cscart install dir]/addons/
-* Open the basic/ folder and copy admin/ and customer/ folder to all the necessary skins INCLUDING basic
+* Open addons/ folder and copy the tsp_product_code_generator to [your cscart install dir]/addons/
 * Open CS-Cart Administration Control Panel
 * Navigate to Settings-> Addons
 * Find the "The Software People: Product Code Generator" addon and click "Install"
