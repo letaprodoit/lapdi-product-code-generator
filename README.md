@@ -10,7 +10,7 @@ in the CS-Cart store.
 * Update settings to manage the number of characters in each product code.
 
 For up-to-date installation and setup notes, visit the FAQ:
-http://lab.thesoftwarepeople.com/tracker/wiki/Cscart-pcg:MainPage
+[http://lab.thesoftwarepeople.com/tracker/wiki/Cscart-pcg:MainPage](http://lab.thesoftwarepeople.com/tracker/wiki/Cscart-pcg:MainPage)
 
 
 ## GENERAL INSTALLATION NOTES
