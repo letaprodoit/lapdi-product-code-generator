@@ -4,7 +4,7 @@
  *
  * @package		TSP Product Code Generator CS-Cart Addon
  * @filename	products.post.php
- * @version		1.0.0
+ * @version		2.0.0
  * @author		Sharron Denice, The Software People, LLC on 2013/02/09
  * @copyright	Copyright © 2013 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
  * @license		APACHE v2.0 (http://www.apache.org/licenses/LICENSE-2.0)
@@ -12,12 +12,14 @@
  * 
  */
 
-if ( !defined('AREA') )	{ die('Access denied');	}
+if ( !defined('BOOTSTRAP') )	{ die('Access denied');	}
 
 if ($_SERVER['REQUEST_METHOD']	== 'POST') 
 {
 	return;
 }//endif
+
+use Tygh\Registry;
 
 $product_id = $_REQUEST['product_id'];
 
@@ -31,7 +33,7 @@ if ($mode == 'update' && !empty($product_id))
 	// Get current product data
 	$product_data = fn_get_product_data($product_id, $auth, DESCR_SL, '', true, true, true, true, false, true, false);
 	
-	if (PRODUCT_TYPE == 'ULTIMATE' && !empty($product_data['shared_product']) && $product_data['shared_product'] == 'Y')
+	if (fn_allowed_for('ULTIMATE') && !empty($product_data['shared_product']) && $product_data['shared_product'] == 'Y')
 	{
 		$product_data = fn_get_product_data($product_id, $auth, DESCR_SL, '', true, true, true, true, false, true, true);
 	}//endif
@@ -41,7 +43,7 @@ if ($mode == 'update' && !empty($product_id))
 	if (empty($product_code))
 	{	
 		$product_data['product_code'] = fn_tsppcg_generate_product_code($product_id, $product_data);		
-		$view->assign('product_data', $product_data);
+		Registry::get('view')->assign('product_data', $product_data);
 		
 	}//endif
 }//endif

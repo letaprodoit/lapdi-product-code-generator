@@ -7,10 +7,10 @@
 	<priority>1111000011</priority>
 	<position>0</position>
 	<status>active</status>
-	<default_language>EN</default_language>
+	<default_language>en</default_language>
 	<auto_install>COMMUNITY,PROFESSIONAL,MULTIVENDOR,ULTIMATE</auto_install>
 	<language_variables>
-		<item lang="EN" id="tsp_product_code_generator">The Software People - Product Code Generator</item>
+		<item lang="en" id="tsp_product_code_generator">The Software People - Product Code Generator</item>
 	</language_variables>
 	<settings>
 		<sections>
@@ -166,6 +166,6 @@
 		</sections>
 	</settings>
 	<functions>
-		<item for="uninstall">fn_tspmc_uninstall_languages</item>
+		<item for="uninstall">fn_tsppcg_uninstall_languages</item>
 	</functions>
 </addon>
