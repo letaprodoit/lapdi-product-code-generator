@@ -14,6 +14,8 @@
 
 if ( !defined('BOOTSTRAP') )	{ die('Access denied');	}
 
+use Tygh\Registry;
+
 /***********
  *
  * [Functions - Addon.xml Handlers]
@@ -177,7 +179,7 @@ function fn_tsppcg_get_company_name($product_id)
 	
 	// if there is a company id associated with the product and this is not
 	// the community version then get the supplier name
-	if (!empty($product_id) && PRODUCT_TYPE != 'COMMUNITY')
+	if (!empty($product_id) && !fn_allowed_for('COMMUNITY'))
 	{
 		$company_id = db_get_field("SELECT `company_id` FROM ?:products WHERE `product_id` = ?i", $product_id);
 		

@@ -8,20 +8,19 @@
 	<position>0</position>
 	<status>active</status>
 	<default_language>en</default_language>
-	<auto_install>COMMUNITY,PROFESSIONAL,MULTIVENDOR,ULTIMATE</auto_install>
 	<language_variables>
 		<item lang="en" id="tsp_product_code_generator">The Software People - Product Code Generator</item>
 	</language_variables>
+	<tab_order>prepend</tab_order>
 	<settings>
 		<sections>
 			<section id="prefix_settings">
-				<!-- Tab name in the default language -->
 				<name>Prefix Settings</name>		
+                <translations>
+                    <item lang="ES" for="name">Prefix Settings</item>
+                    <item lang="FR" for="name">Prefix Settings</item>
+                </translations>
 				<items>
-					<item id="header_prefix">
-						<type>header</type>
-						<name>Prefixes</name>
-					</item>
 					<item id="first_prefix_type">
 						<name>First Prefix for Product Code</name>
 						<type>selectbox</type>
@@ -116,10 +115,15 @@
 							</item>
 						</variants>
 					</item>
-					<item id="header_settings">
-						<type>header</type>
-						<name>Generated Prefix Settings</name>
-					</item>
+				</items>
+			</section>
+			<section id="generated_prefix_settings">
+				<name>Generated Prefix Settings</name>
+                <translations>
+                    <item lang="ES" for="name">Generated Prefix Settings</item>
+                    <item lang="FR" for="name">Generated Prefix Settings</item>
+                </translations>
+				<items>
 					<item id="seperator">
 						<name>Product Code Seperator</name>
 						<type>input</type>
