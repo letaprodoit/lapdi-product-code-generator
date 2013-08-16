@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="TSP Product Code Generator" default="copy_all" basedir=".">
+    <property name="name"  value="tsp_product_code_generator" />
+    <property name="test_site"  value="/Users/SharronDenice/Sites/_testsites/cscart_latest" />
+    <property name="live_site"  value="/Users/SharronDenice/Sites/www.thesoftwarepeople.com/cscart_ult" />
+ 
+    <!-- Fileset for addon files -->
+    <fileset dir="${project.basedir}/app/addons" id="addonfiles">
+        <include name="${name}/*" />
+        <include name="${name}/controllers/*" />
+        <include name="${name}/controllers/backend/*" />
+        <include name="${name}/lib/*" />
+    </fileset>
+
+    <!-- Fileset for all files -->
+    <fileset dir="${project.basedir}" id="allfiles">
+        <include name="install.php" />
+        <include name="app/addons/${name}/*" />
+        <include name="app/addons/${name}/controllers/*" />
+        <include name="app/addons/${name}/controllers/backend/*" />
+        <include name="app/addons/${name}/lib/*" />
+    </fileset>
+
+    <!-- copy_all Target -->
+    <target name="copy_all" description="copy all files target">
+        <!-- Copying to TEST project -->
+        <echo message="Copying ADDON files to TEST project..." />
+        <copy todir="${test_site}/app/addons">
+            <fileset refid="addonfiles" />
+        </copy>
+        <!-- Copying to LIVE project -->
+        <echo message="Copying ADDON files to LIVE project..." />
+        <copy todir="${live_site}/app/addons">
+            <fileset refid="addonfiles" />
+        </copy>
+        <!-- Creating ZIP file -->
+        <delete file="../../${name}.zip" />
+        <zip destfile="../../${name}.zip">
+            <fileset refid="allfiles" />
+        </zip>
+    </target>
+</project>
