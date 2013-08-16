@@ -7,7 +7,7 @@
  * @version		2.0.0
  * @author		Sharron Denice, The Software People, LLC on 2013/02/09
  * @copyright	Copyright © 2013 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
- * @license		APACHE v2.0 (http://www.apache.org/licenses/LICENSE-2.0)
+ * @license		Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported (http://creativecommons.org/licenses/by-nc-nd/3.0/)
  * @brief		Hook initializer for addon
  * 
  */
