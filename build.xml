@@ -34,8 +34,8 @@
             <fileset refid="addonfiles" />
         </copy>
         <!-- Creating ZIP file -->
-        <delete file="../../${name}.zip" />
-        <zip destfile="../../${name}.zip">
+        <delete file="../../${name}_4x.zip" />
+        <zip destfile="../../${name}_4x.zip">
             <fileset refid="allfiles" />
         </zip>
     </target>
