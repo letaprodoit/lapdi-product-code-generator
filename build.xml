@@ -2,7 +2,7 @@
 <project name="TSP Product Code Generator" default="copy_all" basedir=".">
     <property name="name"  value="tsp_product_code_generator" />
     <property name="test_site"  value="/Users/SharronDenice/Sites/_testsites/cscart_latest" />
-    <property name="live_site"  value="/Users/SharronDenice/Sites/www.thesoftwarepeople.com/cscart_ult" />
+    <property name="live_site"  value="/Users/SharronDenice/Sites/www.thesoftwarepeople.com" />
  
     <!-- Fileset for addon files -->
     <fileset dir="${project.basedir}/app/addons" id="addonfiles">
