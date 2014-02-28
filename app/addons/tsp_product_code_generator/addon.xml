@@ -3,13 +3,16 @@
 	<id>tsp_product_code_generator</id>
 	<name>The Software People - Product Code Generator</name>
 	<description>The Software People (TSP) Product Code Generator generates a product code for new products or for any product that does not have one. Code generation is based on a set of combiniations specified in settings.</description>
-	<version>2.0.0</version>
+	<version>2.0.1</version>
 	<priority>1111000011</priority>
 	<position>0</position>
 	<status>active</status>
 	<default_language>en</default_language>
 	<language_variables>
 		<item lang="en" id="tsp_product_code_generator">The Software People - Product Code Generator</item>
+        <item lang="es" id="tsp_product_code_generator">El Pueblo de Software - Product Code Generator</item>
+        <item lang="el" id="tsp_product_code_generator">Oi ánthro̱poi Logismikoú - Product Code Generator</item>
+        <item lang="fr" id="tsp_product_code_generator">Les gens Logiciels - Code produit Générateur</item>       		
 	</language_variables>
 	<tab_order>prepend</tab_order>
 	<settings>
@@ -17,102 +20,233 @@
 			<section id="prefix_settings">
 				<name>Prefix Settings</name>		
                 <translations>
-                    <item lang="ES" for="name">Prefix Settings</item>
-                    <item lang="FR" for="name">Prefix Settings</item>
+                    <item lang="es" for="name">Prefix Settings</item>
+                    <item lang="el" for="name">Rythmíseis prothématos</item>
+                    <item lang="fr" for="name">Configuración de prefijo</item>
                 </translations>
 				<items>
 					<item id="first_prefix_type">
 						<name>First Prefix for Product Code</name>
+		                <translations>
+		                    <item lang="es" for="name">Primera Prefijo para Código de producto</item>
+		                    <item lang="el" for="name">Pró̱ti̱ próthema gia to Ko̱dikós</item>
+		                    <item lang="fr" for="name">Première préfixe pour le code produit</item>
+		                </translations>						
 						<type>selectbox</type>
 						<default_value>company_name</default_value>
 						<variants>
 							<item id="auto_gen">
 								<name>Auto-Generated</name>
+		                        <translations>
+		                            <item lang="es">Autogenerado</item>
+		                            <item lang="el">Auto-Generated</item>
+		                            <item lang="fr">Auto-Création</item>
+		                        </translations>                     																
 							</item>
 							<item id="product_id">
 								<name>Product ID</name>
+                                <translations>
+                                    <item lang="es">Identificación del producto</item>
+                                    <item lang="el">Anagno̱ristikó proïóntos</item>
+                                    <item lang="fr">ID du produit</item>
+                                </translations>                                                                                     																
 							</item>
-							<item id="company_name">
-								<name>First Letters of Company Name</name>
-							</item>
-							<item id="product_name">
-								<name>First Letters of Product Name</name>
-							</item>
-							<item id="category_name">
-								<name>First Letters of Category Name</name>
-							</item>
+                            <item id="company_name">
+                                <name>First Letters of Company Name</name>
+                                <translations>
+                                    <item lang="es">Primeras letras del nombre de la empresa</item>
+                                    <item lang="el">Pró̱ta grámmata tou onómatos Etaireías</item>
+                                    <item lang="fr">Premières lettres de Nom de l'entreprise</item>
+                                </translations>                                                                                                                                                                                                                                                                                     
+                            </item>
+                            <item id="product_name">
+                                <name>First Letters of Product Name</name>
+                                <translations>
+                                    <item lang="es">Primeras letras del nombre del producto</item>
+                                    <item lang="el">Pró̱ta grámmata tou onómatos proïóntos</item>
+                                    <item lang="fr">Premières lettres du nom du produit</item>
+                                </translations>                                                                                                                                                                                                                                                                                     
+                            </item>
+                            <item id="category_name">
+                                <name>First Letters of Category Name</name>
+                                <translations>
+                                    <item lang="es">Primeras letras del nombre de categoría</item>
+                                    <item lang="el">Pró̱ti̱ Epistolés Ónoma kati̱gorías</item>
+                                    <item lang="fr">Premières lettres de Nom de la catégorie</item>
+                                </translations>                                                                                                                                                                                                                                                                                     
+                            </item>
 						</variants>
 					</item>
 					<item id="second_prefix_type">
 						<name>Second Prefix for Product Code</name>
-						<type>selectbox</type>
+                        <translations>
+                            <item lang="es" for="name">Segundo Prefijo para Código de producto</item>
+                            <item lang="el" for="name">Déf̱teri̱ próthema gia to Ko̱dikós</item>
+                            <item lang="fr" for="name">Deuxième préfixe pour le code produit</item>
+                        </translations>                     
+  						<type>selectbox</type>
 						<default_value>none</default_value>
 						<variants>
 							<item id="none">
 								<name>None</name>
+                                <translations>
+                                    <item lang="es">ninguno</item>
+                                    <item lang="el">kanénas</item>
+                                    <item lang="fr">aucun</item>
+                                </translations>                                                                                     																
 							</item>
 							<item id="auto_gen">
 								<name>Auto-Generated</name>
+                                <translations>
+                                    <item lang="es">Autogenerado</item>
+                                    <item lang="el">Auto-Generated</item>
+                                    <item lang="fr">Auto-Création</item>
+                                </translations>                                                                                     																
 							</item>
 							<item id="product_id">
 								<name>Product ID</name>
+                                <translations>
+                                    <item lang="es">Identificación del producto</item>
+                                    <item lang="el">Anagno̱ristikó proïóntos</item>
+                                    <item lang="fr">ID du produit</item>
+                                </translations>                                                                                                                                                     																
 							</item>
 							<item id="company_name">
 								<name>First Letters of Company Name</name>
+                                <translations>
+                                    <item lang="es">Primeras letras del nombre de la empresa</item>
+                                    <item lang="el">Pró̱ta grámmata tou onómatos Etaireías</item>
+                                    <item lang="fr">Premières lettres de Nom de l'entreprise</item>
+                                </translations>                                                                                                                                                                                                                     																
 							</item>
 							<item id="product_name">
 								<name>First Letters of Product Name</name>
+                                <translations>
+                                    <item lang="es">Primeras letras del nombre del producto</item>
+                                    <item lang="el">Pró̱ta grámmata tou onómatos proïóntos</item>
+                                    <item lang="fr">Premières lettres du nom du produit</item>
+                                </translations>                                                                                                                                                                                                                     																
 							</item>
 							<item id="category_name">
 								<name>First Letters of Category Name</name>
+                                <translations>
+                                    <item lang="es">Primeras letras del nombre de categoría</item>
+                                    <item lang="el">Pró̱ti̱ Epistolés Ónoma kati̱gorías</item>
+                                    <item lang="fr">Premières lettres de Nom de la catégorie</item>
+                                </translations>                                                                                                                                                                                                                     																
 							</item>
 						</variants>
 					</item>
 					<item id="third_prefix_type">
 						<name>Third Prefix for Product Code</name>
-						<type>selectbox</type>
+                        <translations>
+                            <item lang="es" for="name">Tercer Prefijo para Código de producto</item>
+                            <item lang="el" for="name">Tríton próthema gia to Ko̱dikós</item>
+                            <item lang="fr" for="name">Troisième préfixe pour le code produit</item>
+                        </translations>                     
+  						<type>selectbox</type>
 						<default_value>none</default_value>
 						<variants>
-							<item id="none">
-								<name>None</name>
-							</item>
+                            <item id="none">
+                                <name>None</name>
+                                <translations>
+                                    <item lang="es">ninguno</item>
+                                    <item lang="el">kanénas</item>
+                                    <item lang="fr">aucun</item>
+                                </translations>                                                                                                                                                     
+                            </item>
 							<item id="auto_gen">
 								<name>Auto-Generated</name>
+                                <translations>
+                                    <item lang="es">Autogenerado</item>
+                                    <item lang="el">Auto-Generated</item>
+                                    <item lang="fr">Auto-Création</item>
+                                </translations>                                                                                     																
 							</item>
 							<item id="product_id">
 								<name>Product ID</name>
+                                <translations>
+                                    <item lang="es">Identificación del producto</item>
+                                    <item lang="el">Anagno̱ristikó proïóntos</item>
+                                    <item lang="fr">ID du produit</item>
+                                </translations>                                                                                                                                                     																
 							</item>
-							<item id="company_name">
-								<name>First Letters of Company Name</name>
-							</item>
-							<item id="product_name">
-								<name>First Letters of Product Name</name>
-							</item>
-							<item id="category_name">
-								<name>First Letters of Category Name</name>
-							</item>
+                            <item id="company_name">
+                                <name>First Letters of Company Name</name>
+                                <translations>
+                                    <item lang="es">Primeras letras del nombre de la empresa</item>
+                                    <item lang="el">Pró̱ta grámmata tou onómatos Etaireías</item>
+                                    <item lang="fr">Premières lettres de Nom de l'entreprise</item>
+                                </translations>                                                                                                                                                                                                                                                                                     
+                            </item>
+                            <item id="product_name">
+                                <name>First Letters of Product Name</name>
+                                <translations>
+                                    <item lang="es">Primeras letras del nombre del producto</item>
+                                    <item lang="el">Pró̱ta grámmata tou onómatos proïóntos</item>
+                                    <item lang="fr">Premières lettres du nom du produit</item>
+                                </translations>                                                                                                                                                                                                                                                                                     
+                            </item>
+                            <item id="category_name">
+                                <name>First Letters of Category Name</name>
+                                <translations>
+                                    <item lang="es">Primeras letras del nombre de categoría</item>
+                                    <item lang="el">Pró̱ti̱ Epistolés Ónoma kati̱gorías</item>
+                                    <item lang="fr">Premières lettres de Nom de la catégorie</item>
+                                </translations>                                                                                                                                                                                                                                                                                     
+                            </item>
 						</variants>
 					</item>
 					<item id="last_prefix_type">
 						<name>Last Prefix for Product Code</name>
+                        <translations>
+                            <item lang="es" for="name">Última Prefijo para Código de producto</item>
+                            <item lang="el" for="name">Telef̱taía próthema gia to Ko̱dikós</item>
+                            <item lang="fr" for="name">Prefix dernier pour le code produit</item>
+                        </translations>                     						
 						<type>selectbox</type>
 						<default_value>auto_gen</default_value>
 						<variants>
 							<item id="auto_gen">
 								<name>Auto-Generated</name>
+                                <translations>
+                                    <item lang="es">Autogenerado</item>
+                                    <item lang="el">Auto-Generated</item>
+                                    <item lang="fr">Auto-Création</item>
+                                </translations>                                                                                     																
 							</item>
 							<item id="product_id">
 								<name>Product ID</name>
+                                <translations>
+                                    <item lang="es">Identificación del producto</item>
+                                    <item lang="el">Anagno̱ristikó proïóntos</item>
+                                    <item lang="fr">ID du produit</item>
+                                </translations>                                                                                                                                                     																
 							</item>
-							<item id="company_name">
-								<name>First Letters of Company Name</name>
-							</item>
-							<item id="product_name">
-								<name>First Letters of Product Name</name>
-							</item>
-							<item id="category_name">
-								<name>First Letters of Category Name</name>
-							</item>
+                            <item id="company_name">
+                                <name>First Letters of Company Name</name>
+                                <translations>
+                                    <item lang="es">Primeras letras del nombre de la empresa</item>
+                                    <item lang="el">Pró̱ta grámmata tou onómatos Etaireías</item>
+                                    <item lang="fr">Premières lettres de Nom de l'entreprise</item>
+                                </translations>                                                                                                                                                                                                                                                                                     
+                            </item>
+                            <item id="product_name">
+                                <name>First Letters of Product Name</name>
+                                <translations>
+                                    <item lang="es">Primeras letras del nombre del producto</item>
+                                    <item lang="el">Pró̱ta grámmata tou onómatos proïóntos</item>
+                                    <item lang="fr">Premières lettres du nom du produit</item>
+                                </translations>                                                                                                                                                                                                                                                                                     
+                            </item>
+                            <item id="category_name">
+                                <name>First Letters of Category Name</name>
+                                <translations>
+                                    <item lang="es">Primeras letras del nombre de categoría</item>
+                                    <item lang="el">Pró̱ti̱ Epistolés Ónoma kati̱gorías</item>
+                                    <item lang="fr">Premières lettres de Nom de la catégorie</item>
+                                </translations>                                                                                                                                                                                                                                                                                     
+                            </item>
 						</variants>
 					</item>
 				</items>
@@ -120,48 +254,94 @@
 			<section id="generated_prefix_settings">
 				<name>Generated Prefix Settings</name>
                 <translations>
-                    <item lang="ES" for="name">Generated Prefix Settings</item>
-                    <item lang="FR" for="name">Generated Prefix Settings</item>
+                    <item lang="el" for="name">Di̱miourgi̱méno prothématos Rythmíseis</item>
+                    <item lang="es" for="name">Configuración de prefijos generados</item>
+                    <item lang="fr" for="name">Paramètres préfixe générés</item>
                 </translations>
 				<items>
 					<item id="seperator">
-						<name>Product Code Seperator</name>
+						<name>Product Code Separator</name>
+                        <translations>
+                            <item lang="el" for="name">Ko̱dikós Diacho̱ristikó</item>
+                            <item lang="es" for="name">Código del producto Separador</item>
+                            <item lang="fr" for="name">Code produit Separator</item>
+                        </translations>                                             
 						<type>input</type>
 						<default_value>-</default_value>
 					</item>
 					<item id="prefix_auto_gen_len">
 						<name>Maximum Number of Chars for Autogenerated Prefix</name>
+		                <translations>
+		                    <item lang="el" for="name">Mégistos arithmós Chars gia Auto Generated próthema</item>
+		                    <item lang="es" for="name">Máximo número de caracteres para el prefijo Generado Auto</item>
+		                    <item lang="fr" for="name">Nombre maximum de Chars pour préfixe Création automatique</item>
+		                </translations>												
 						<type>input</type>
 						<default_value>3</default_value>
 					</item>
 					<item id="prefix_auto_gen_type">
 						<name>Type of Chars for Autogenerated Prefix</name>
+                        <translations>
+                            <item lang="el" for="name">Eídos Chars gia Auto Generated próthema</item>
+                            <item lang="es" for="name">Tipo de Chars para Prefijo Generado Auto</item>
+                            <item lang="fr" for="name">Type de Chars pour préfixe Création automatique</item>
+                        </translations>                                             
 						<type>selectbox</type>
 						<default_value>numbers</default_value>
 						<variants>
 							<item id="mixed">
 								<name>Mixed (Numbers/Chars)</name>
+                                <translations>
+                                    <item lang="es">Mixta (Números / Chars)</item>
+                                    <item lang="el">Miktí̱ ( Arithmoí / Charaktí̱res )</item>
+                                    <item lang="fr">Mixte (chiffres / Chars)</item>
+                                </translations>                                                                                                                                                                                                                                                                                     																
 							</item>
 							<item id="numbers">
 								<name>Numbers Only</name>
+	                             <translations>
+                                    <item lang="es">Sólo números</item>
+                                    <item lang="el">arithmoí Móno</item>
+                                    <item lang="fr">Seuls les numéros</item>
+                                </translations>                                                                                                                                                                                                                                                                                     														
 							</item>
 							<item id="chars">
 								<name>Chars Only</name>
+                                <translations>
+                                    <item lang="es">chars Sólo</item>
+                                    <item lang="el">Móno charaktí̱res</item>
+                                    <item lang="fr">chars Seulement</item>
+                                </translations>                                                                                                                                                                                                                                                                                     																
 							</item>
 						</variants>
 					</item>
 					<item id="prefix_company_name_len">
 						<name>Maximum Number of Chars for the Company Name</name>
+                        <translations>
+                            <item lang="el" for="name">Mégistos arithmós Charaktí̱res gia to ónoma ti̱s etaireías</item>
+                            <item lang="es" for="name">Máximo número de caracteres para el nombre de compañía</item>
+                            <item lang="fr" for="name">Nombre maximum de Chars pour le Nom de l'entreprise</item>
+                        </translations>                                             
 						<type>input</type>
 						<default_value>3</default_value>
 					</item>
 					<item id="prefix_product_name_len">
 						<name>Maximum Number of Chars for Product Name Prefix</name>
+                        <translations>
+                            <item lang="el" for="name">Mégistos arithmós Chars gia Ónoma Proïóntos próthema</item>
+                            <item lang="es" for="name">Número máximo de Chars de Productos Prefijo</item>
+                            <item lang="fr" for="name">Nombre maximum de Chars pour Nom du produit préfixe</item>
+                        </translations>                                             												
 						<type>input</type>
 						<default_value>3</default_value>
 					</item>
 					<item id="prefix_category_name_len">
 						<name>Maximum Number of Chars for Category Name Prefix</name>
+                        <translations>
+                            <item lang="el" for="name">Mégistos arithmós Charaktí̱res gia ti̱n kati̱goría Ónoma próthema</item>
+                            <item lang="es" for="name">Máximo número de caracteres para la categoría Prefijo de nombre</item>
+                            <item lang="fr" for="name">Nombre maximum de Chars pour Nom de la catégorie préfixe</item>
+                        </translations>                                             												
 						<type>input</type>
 						<default_value>3</default_value>
 					</item>
