@@ -47,6 +47,7 @@ function fn_tsppcg_uninstall_languages ()
  ***********/
 function fn_tsppcg_info_update_product_codes () 
 {
+	// changes made for 3x development
 	$product_count = db_get_field("SELECT COUNT(*) FROM ?:products WHERE `company_id` = ?i", COMPANY_ID);
 	$invalid_product_count = fn_tspcg_count_invalid_product_codes(COMPANY_ID);
 	
@@ -85,6 +86,7 @@ function fn_tsppcg_info_update_product_codes ()
 	}
 
 	$enabled = "";
+	// Company ID can be null in 3x dev
 	if ($invalid_product_count == 0 || $product_count == 0)
 		$enabled = "disabled";
 	
@@ -137,6 +139,7 @@ function fn_tsppcg_info_replace_product_codes ()
 	}	
 	
 	$enabled = "";
+	// Company ID can be null in 3x dev
 	if ($product_count == 0)
 			$enabled = "disabled";
 	
@@ -730,7 +733,7 @@ function fn_tsppcg_product_code_type_match($old_code, $new_code)
 * Function to update the product codes in the database
 *
 ***********/
-function fn_tsppcg_update_product_codes($product_ids, $display_output, $return_url)
+function fn_tsppcg_update_product_codes($product_ids, $display_output, $return_url = null)
 {
 	$product_count = count($product_ids);
 	
