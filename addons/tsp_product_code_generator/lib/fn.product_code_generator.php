@@ -4,7 +4,7 @@
  *
  * @package		TSP Product Code Generator CS-Cart Addon
  * @filename	fn.product_code_generator.php
- * @version		1.1.0
+ * @version		1.1.1
  * @author		Sharron Denice, The Software People, LLC on 2013/02/09
  * @copyright	Copyright © 2013 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
  * @license		Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported (http://creativecommons.org/licenses/by-nc-nd/3.0/)
@@ -213,43 +213,6 @@ Si vous n\'êtes pas sûr de ce que vous faites, s\'il vous plaît une sauvegard
  * [Functions - General]
  *
  ***********/
-
-/***********
- *
-* Function to start displaying output to screen at runtime
-*
-***********/
-function fn_tsppcg_prepare_start_output_to_screen()
-{
-	// Turn off output buffering
-	ini_set('output_buffering', 'off');
-	// Turn off PHP output compression
-	ini_set('zlib.output_compression', false);
-
-	//Flush (send) the output buffer and turn off output buffering
-	//ob_end_flush();
-	while (@ob_end_flush());
-
-	// Implicitly flush the buffer(s)
-	ini_set('implicit_flush', true);
-	ob_implicit_flush(true);
-
-	for($i = 0; $i < 1000; $i++)
-	{
-		echo ' ';
-	}
-}
-
-/***********
- *
-* Function to end displaying output to screen at runtime
-*
-***********/
-function fn_tsppcg_prepare_end_output_to_screen()
-{
-	ob_flush();
-	flush();
-}
 
 /***********
  *
@@ -741,8 +704,8 @@ function fn_tsppcg_update_product_codes($product_ids, $display_output, $return_u
 	{
 		if ($display_output)
 		{
-			fn_tsppcg_prepare_start_output_to_screen();
 			echo "Please be patient while $product_count records are updated...<br><br><br>\n\n\n";
+			fn_flush();
 		}//end if
 		
 		$counter = 1;
@@ -776,6 +739,8 @@ function fn_tsppcg_update_product_codes($product_ids, $display_output, $return_u
 			if ($display_output)
 			{
 				echo "$counter. Updated <strong>{$name}</strong> product code from <strong>[$current_product_code]</strong> to <strong>[{$product_data['product_code']}]</strong>...<br>\n";
+				fn_flush();
+				
 				usleep(500000); // sleep for half a second
 				$counter++;
 			}//end if
@@ -788,8 +753,9 @@ function fn_tsppcg_update_product_codes($product_ids, $display_output, $return_u
 			{
 				echo "..<a href='$return_url'>[Continue]</a>.";
 			}
+			fn_flush();
+			
 			sleep(10);
-			fn_tsppcg_prepare_end_output_to_screen();
 		}//end if
 	}
 }

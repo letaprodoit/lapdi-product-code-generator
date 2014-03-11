@@ -3,7 +3,7 @@
 	<id>tsp_product_code_generator</id>
 	<name>The Software People - Product Code Generator</name>
 	<description>The Software People (TSP) Product Code Generator generates a product code for new products or for any product that does not have one. Code generation is based on a set of combiniations specified in settings.</description>
-	<version>1.1.0</version>
+	<version>1.1.1</version>
 	<priority>1111000011</priority>
 	<position>0</position>
 	<status>active</status>
