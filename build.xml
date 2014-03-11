@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="TSP Product Code Generator" default="copy_all" basedir=".">
-    <property name="dir_3x"  value="tsp-product-code_generator-3x" />
+    <property name="dir_3x"  value="tsp-product-code-generator-3x" />
     <property name="name"  value="tsp_product_code_generator" />
     <property name="test_site"  value="/Users/SharronDenice/Sites/_testsites/cscart_302" />
 
