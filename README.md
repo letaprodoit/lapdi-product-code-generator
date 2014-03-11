@@ -16,8 +16,9 @@ For up-to-date installation and setup notes, visit the FAQ:
 ## GENERAL INSTALLATION NOTES
 
 * Download from repository
-* Unzip the zip file
-* Open addons/ folder and copy the tsp_product_code_generator to [your cscart install dir]/addons/
+* Unzip the zip file in the directory where CS-Cart runs
+* If the zip creates a new directory called `tsp-product-code-generator` you will need to run the install script, else you are done
+* If `tsp-product-code-generator` folder created by zip, Navigate to the folder. Update the $target_loc in the install.php and run its. Command: php install.php
 * Open CS-Cart Administration Control Panel
 * Navigate to Administration-> Addons
 * Find the "The Software People: Product Code Generator" addon and click "Install"
