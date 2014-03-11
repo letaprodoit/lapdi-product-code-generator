@@ -1,6 +1,6 @@
-# Product Code Generator for CS-Cart
+# Product Code Generator (CS-Cart Addon)
 -------
-Product Code Generator for CS-Cart is an addon that generates customized product codes for products listed
+Product Code Generator (CS-Cart Addon) is an addon that generates customized product codes for products listed
 in the CS-Cart store.
 
 ## FEATURES
@@ -18,7 +18,7 @@ For up-to-date installation and setup notes, visit the FAQ:
 * Download from repository
 * Unzip the zip file in the directory where CS-Cart runs
 * If the zip creates a new directory called `tsp-product-code-generator` you will need to run the install script, else you are done
-* If `tsp-appointments` folder created by zip, Navigate to the folder. Update the $target_loc in the install.php and run its. Command: php install.php
+* If `tsp-product-code-generator` folder created by zip, Navigate to the folder. Update the $target_loc in the install.php and run its. Command: php install.php
 * Open CS-Cart Administration Control Panel
 * Navigate to Addons -> Manage Addons
 * Find the "The Software People: Product Code Generator" addon and click "Install"
@@ -27,11 +27,16 @@ For up-to-date installation and setup notes, visit the FAQ:
 
 ## USING THE MODULE
 
-* When creating a product for the first time, leave the product code blank and upon save, a new code will be generated based on your settings.
-* If you wish to change all of the product codes you currently have in the store, Navigate to Products->Products in Admin area. Select all the products you wish to change codes for. 
-* At the bottom of the list, click on "Choose Action->Edit Selection"
-* On the popup, unselect all except product code and click "Modify Selected"
-* Leave all the product codes blank and click Save
+* When creating a product for the first time, leave the product code blank and upon save a new code will be generated based on your settings. Anytime you leave the product code blank when saving a product, upon save a new product code will be generated based on your settings
+* If you wish to change all of the product codes you currently have in the store:
+** Navigate to Addons -> Manage Addons in Admin area, and click Settings.
+** At the top of the list, click on "Bulk Product Code Generator"
+** READ THE INSTRUCTIONS ON SCREEN
+* You can also change a substantial amount of product codes by doing the following:
+** Navigate to Products->Products in Admin area. Select all the products you wish to change codes for. 
+** At the bottom of the list, click on "Choose Action->Edit Selection"
+** On the popup, unselect all except product code and click "Modify Selected"
+** Leave all the product codes blank and upon save a new product codes will be generated based on your settings
 
 ## REPORTING ISSUES
 
