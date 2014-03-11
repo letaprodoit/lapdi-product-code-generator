@@ -207,6 +207,14 @@
 						<type>selectbox</type>
 						<default_value>auto_gen</default_value>
 						<variants>
+                            <item id="none">
+                                <name>None</name>
+                                <translations>
+                                    <item lang="ES">ninguno</item>
+                                    <item lang="EL">kanénas</item>
+                                    <item lang="FR">aucun</item>
+                                </translations>                                                                                                                                                     
+                            </item>
 							<item id="auto_gen">
 								<name>Auto-Generated</name>
                                 <translations>

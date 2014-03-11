@@ -88,6 +88,7 @@ function fn_tsppcg_info_update_product_codes ()
 	}
 
 	$enabled = "";
+	// Company ID must be set to a non-null value for 4x dev
 	if (is_null($company_id) || $invalid_product_count == 0 || $product_count == 0)
 		$enabled = "disabled";
 	
@@ -141,6 +142,7 @@ function fn_tsppcg_info_replace_product_codes ()
 	}	
 	
 	$enabled = "";
+	// Company ID must be set to a non-null value for 4x dev
 	if (is_null($company_id) || $product_count == 0)
 			$enabled = "disabled";
 	
@@ -335,6 +337,14 @@ function fn_tsppcg_generate_product_code($product_id, &$product_data)
 		
 		// Last prefix
 		$product_code .= fn_tsppcg_create_prefix($data, $settings['last_prefix_type'], $settings['prefix_auto_gen_len'], $settings['prefix_auto_gen_type'],'');
+		
+		// if seperator found at the end of the code remove it
+		// this means the user wanted no last prefix
+		// convert seperator to a regular expression
+		$seperator_regex = preg_quote($settings['seperator'], '/');
+		$seperator_regex .= "$"; //seperator at the end of the string
+				
+		$product_code = preg_replace("/".$seperator_regex."/", "", $product_code);
 	}//endif
 
 	return $product_code;
@@ -727,7 +737,7 @@ function fn_tsppcg_product_code_type_match($old_code, $new_code)
 * Function to update the product codes in the database
 *
 ***********/
-function fn_tsppcg_update_product_codes($product_ids, $display_output, $return_url)
+function fn_tsppcg_update_product_codes($product_ids, $display_output, $return_url = null)
 {
 	$product_count = count($product_ids);
 	
@@ -770,14 +780,18 @@ function fn_tsppcg_update_product_codes($product_ids, $display_output, $return_u
 			if ($display_output)
 			{
 				echo "$counter. Updated <strong>{$name}</strong> product code from <strong>[$current_product_code]</strong> to <strong>[{$product_data['product_code']}]</strong>...<br>\n";
-				sleep(1);
+				usleep(500000); // sleep for half a second
 				$counter++;
 			}//end if
 		}//end foreach
 		
 		if ($display_output)
 		{
-			echo "<br><br>\n\nDone...<a href='$return_url'>[Continue]</a>";
+			echo "<br><br>\n\nDone.";
+			if ($return_url)
+			{
+				echo "..<a href='$return_url'>[Continue]</a>.";
+			}
 			sleep(10);
 			fn_tsppcg_prepare_end_output_to_screen();
 		}//end if

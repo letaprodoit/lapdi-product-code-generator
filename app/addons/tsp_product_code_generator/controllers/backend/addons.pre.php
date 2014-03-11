@@ -24,8 +24,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' and $mode == 'update'
 	// in the registry to capture the user's latest changes
 	if (isset($_REQUEST['addon_data']))
 	{
-		//TODO: addon data not being updated
-		fn_update_addon($_REQUEST['addon_data']);
+		// TODO - Determine why settings are not being updated
+		//fn_update_addon($_REQUEST['addon_data']);
 	}//end if
 }
 ?>
