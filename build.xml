@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="TSP Product Code Generator" default="copy_all" basedir=".">
+    <property name="dir_3x"  value="tsp-product-code_generator-3x" />
+    <property name="name"  value="tsp_product_code_generator" />
+    <property name="test_site"  value="/Users/SharronDenice/Sites/_testsites/cscart_302" />
+
+    <!-- Fileset for 3x addon files -->
+    <fileset dir="${project.basedir}/addons" id="addonfiles">
+        <include name="${name}/*" />
+        <include name="${name}/controllers/*" />
+        <include name="${name}/controllers/admin/*" />
+        <include name="${name}/lib/*" />
+    </fileset>
+ 
+    <!-- Fileset for all 3x files -->
+    <fileset dir="${project.basedir}" id="allfiles">
+        <include name="LICENSE" />
+        <include name="README.md" />
+        <include name="install.php" />
+        <include name="addons/${name}/*" />
+        <include name="addons/${name}/controllers/*" />
+        <include name="addons/${name}/controllers/admin/*" />
+        <include name="addons/${name}/lib/*" />
+    </fileset>
+    
+    <!-- copy_all Target -->
+    <target name="copy_all" description="copy all files target">
+        
+       <!-- Copying 3x dir to temp3x  directory... -->
+        <echo message="Copying 3x dir to temp 3x directory..." />
+        <copy todir="../${dir_3x}">
+            <fileset refid="allfiles" />
+        </copy>
+         
+        <!-- Copying to TEST 3x project -->
+        <echo message="Copying ADDON files to TEST 3x project..." />
+        <copy todir="${test_site}/addons">
+            <fileset refid="addonfiles" />
+        </copy>
+        
+        <!-- Creating ZIP file -->
+        <delete file="../../${name}_3x.zip" />
+        <zip destfile="../../${name}_3x.zip">
+            <fileset refid="allfiles" />
+        </zip>        
+    </target>
+</project>
