@@ -3,7 +3,7 @@
 	<id>tsp_product_code_generator</id>
 	<name>The Software People - Product Code Generator</name>
 	<description>The Software People (TSP) Product Code Generator generates a product code for new products or for any product that does not have one. Code generation is based on a set of combiniations specified in settings.</description>
-	<version>2.0.1</version>
+	<version>2.1.1</version>
 	<priority>1111000011</priority>
 	<position>0</position>
 	<status>active</status>
@@ -347,6 +347,49 @@
 					</item>
 				</items>
 			</section>
+            <section id="generator">
+                <name>Bulk Product Code Generator</name>        
+                <translations>
+                    <item lang="es" for="name">Bulk Producto Code Generator</item>
+                    <item lang="el" for="name">Ko̱dikós Proïóntos Genní̱tria Bulk</item>
+                    <item lang="fr" for="name">Code de produit en vrac Générateur</item>
+                </translations>
+                <items>
+                    <item id="instructions">
+                        <name>Instructions</name>
+                        <translations>
+                            <item lang="es" for="name">Análisis</item>
+                            <item lang="el" for="name">Instrucciones</item>
+                            <item lang="fr" for="name">Instructions</item>
+                        </translations>                     
+                        <type>header</type>
+                   </item>
+                   <item id="anlysis_info">
+                       <name>Analysis Info</name>
+                        <type>info</type>
+                        <handler>fn_tsppcg_display_product_analysis</handler>
+                    </item>
+                    <item id="options">
+                        <name>Options</name>
+                        <translations>
+                            <item lang="es" for="name">Opciones</item>
+                            <item lang="el" for="name">Epilogés</item>
+                            <item lang="fr" for="name">les Options</item>
+                        </translations>                     
+                        <type>header</type>
+                   </item>
+                   <item id="update_product_codes">
+                        <name>Update Info</name>
+                        <type>info</type>
+                        <handler>fn_tsppcg_info_update_product_codes</handler>
+                   </item>
+                    <item id="replace_all_product_codes">
+                        <name>Replace Info</name>
+                        <type>info</type>
+                        <handler>fn_tsppcg_info_replace_product_codes</handler>   
+                    </item>
+                </items>
+            </section>
 		</sections>
 	</settings>
 	<functions>
