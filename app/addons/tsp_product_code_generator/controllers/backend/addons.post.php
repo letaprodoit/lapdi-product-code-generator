@@ -4,7 +4,7 @@
  *
  * @package		TSP Product Code Generator CS-Cart Addon
  * @filename	fn.product_code_generator.php
- * @version		2.1.4.2
+ * @version		2.1.4.3
  * @author		Sharron Denice, The Software People, LLC on 2013/02/09
  * @copyright	Copyright © 2013 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
  * @license		Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported (http://creativecommons.org/licenses/by-nc-nd/3.0/)
@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' and $mode == 'update'
 			$starting_product_id = 0;
 		}//end if
 		
-		$product_ids = db_get_fields("SELECT `product_id` FROM ?:products WHERE `company_id` = ?i AND `product_id` >= ?i", COMPANY_ID, $starting_product_id);		
+		$product_ids = db_get_fields("SELECT `product_id` FROM ?:products WHERE `company_id` = ?i AND `product_id` >= ?i", $company_id, $starting_product_id);
 		fn_tsppcg_update_product_codes($product_ids, true, $return_url);
 	}
 	
