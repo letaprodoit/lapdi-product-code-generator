@@ -95,8 +95,8 @@
         </copy>
         
         <!-- Creating ZIP file -->
-        <delete file="../../${name}_4x.zip" />
-        <zip destfile="../../${name}_4x.zip">
+        <delete file="../../${name}_4x_LS.zip" />
+        <zip destfile="../../${name}_4x_LS.zip">
             <fileset refid="4x_allfiles" />
         </zip>
         
