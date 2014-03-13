@@ -4,7 +4,7 @@
  *
  * @package		TSP Product Code Generator CS-Cart Addon
  * @filename	fn.product_code_generator.php
- * @version		2.1.4.1
+ * @version		2.1.4.2
  * @author		Sharron Denice, The Software People, LLC on 2013/02/09
  * @copyright	Copyright © 2013 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
  * @license		Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported (http://creativecommons.org/licenses/by-nc-nd/3.0/)
@@ -109,14 +109,23 @@ function fn_tsppcg_info_replace_product_codes ()
 
 	$field_html = '
 	<div class="control-group setting-wide tsp_product_code_generator">
-        <label for="addon_option_tsp_product_code_generator_bulk_replace" class="control-label ">%s:</label>
+		<script>
+			function tsp_product_code_generator_bulk_replace()
+			{
+				document.getElementById(\'addon_option_tsp_product_code_generator_bulk_replace\').value = true; 
+				document.getElementById(\'addon_option_tsp_product_code_generator_starting_id\').value = document.getElementById(\'addon_option_tsp_product_code_generator_starting_product_id\').value;
+			}
+		</script>
+		<label for="addon_option_tsp_product_code_generator_bulk_replace" class="control-label ">%s:</label>
         <div class="controls">
         	<input class="btn btn-primary " 
-				onclick="javascript:document.getElementById(\'addon_option_tsp_product_code_generator_bulk_replace\').value = true;"
+				onclick="javascript:tsp_product_code_generator_bulk_replace();"
 			 	type="submit" name="dispatch[addons.update]" value="%s">
 			<input type="hidden" id="addon_option_tsp_product_code_generator_bulk_replace"
 				name="addon_option_tsp_product_code_generator_bulk_replace" />
-           	<div class="right replace-for-all"></div>
+			<input type="hidden" id="addon_option_tsp_product_code_generator_starting_id"
+				name="addon_option_tsp_product_code_generator_starting_id" />
+			<div class="right replace-for-all"></div>
        </div>
   	</div>';
 	
@@ -147,34 +156,38 @@ function fn_tsppcg_display_product_analysis()
 	
 	$info = array();
 	
-	$info['en'] = '
-<p>If you <strong>do not</strong> want to change your current prefix settings and wish to update your records, then click the "Replace" button below</p>
-<p>If you <strong>do</strong> want to change your prefix settings, choose the appropriate tab above to make updates, then <strong>click "Save"</strong>, then navigate back to the <strong>"Bulk Product Code Generator"</strong> tab and click the "Replace" button below.</p><br>
-<p>Click the "<strong>Replace</strong>" button to reset your product code on ALL products in the store.</p>
-<p><br><strong>WARNING</strong>: <strong>Changes are <u>irreversible</u> and only <u>occur for your current company ID.</u></strong>
-If you are unsure of what you are doing, please backup your database first, before making these changes.</p><br><br>';
-			
-	$info['el'] = '
-<p>An<strong> den</strong> thélete na alláxete tis tréchouses rythmíseis próthema sas kai thélete na eni̱meró̱sete ta archeía sas, sti̱ synécheia, kánte klik sto koumpí "Antikatástasi̱" káto̱ apó</p>
-<p>An<strong> kánete</strong> thélete na alláxete tis rythmíseis próthema sas, epiléxte ti̱n katálli̱li̱ kartéla parapáno̱ gia na kánoun eni̱meró̱seis kai, sti̱ synécheia kánte klik sto koumpí<strong>"Apothí̱kef̱si̱"</strong>, sti̱ synécheia, metaveíte píso̱ sto<strong>" Mazikí̱ Ko̱dikós Generator"</strong> kartéla kai kánte klik sto "Antikatástasi̱ " koumpí parakáto̱.</p><br>
-<p>Kánte klik sto "<strong> Antikatástasi̱</strong>" koumpí gia na epanaférete ton ko̱dikó tou proïóntos sas se óla ta proïónta sto katásti̱ma.</p>
-<p><br><strong> PROEIDOPOII̱SI̱</strong>: <strong> allagés eínai mi̱ anastrépsimes<u></u> kai móno<u> symveí gia ti̱n tréchousa taf̱tóti̱ta ti̱s etaireías sas</u></strong>
-Eán den eíste sígouroi gia to ti kánete, parakaló̱ backup ti̱s vási̱s dedoméno̱n sas pró̱ta, prin apó ti̱n pragmatopoíi̱si̱ af̱tó̱n to̱n allagó̱n.</P><br><br';
-			
-	$info['es'] =  '
-<p>Si<strong> qué no</strong> que desee cambiar la configuración de prefijos actuales y desea actualizar sus datos, a continuación, haga clic en el botón "Cambiar" por debajo de</p> 
-<p>Si<strong> haces</strong> que desee cambiar la configuración de prefijo, seleccione la ficha correspondiente de arriba para hacer cambios, entonces<strong> clic en "Guardar"</strong>, a continuación, vaya de nuevo a la<strong>"Código Bulk Producto Generador"</strong> y haga clic en el botón "Cambiar" a continuación.</p><br>
-<p>Haga clic en la "<strong> Reemplace</strong>" botón para restablecer el código de producto en todos los productos en el almacén.</p> 
-<p><strong> ADVERTENCIA</strong>: Cambios<strong> son<u> irreversible</u> y sólo<U> producen para su empresa actual ID</u></strong> 
-Si no está seguro de lo que estás haciendo, por favor copia de seguridad de su base de datos en primer lugar, antes de realizar estos cambios.</P><br><br';
-				
-	$info['fr'] = '
-<p>Si vous ne le faites pas<strong></strong> vous souhaitez modifier vos paramètres de préfixe actuelles et souhaitez mettre à jour vos dossiers, puis cliquez sur le bouton "Remplacer" ci-dessous</p> 
-<p>Si vous faites<strong></strong> vous souhaitez modifier vos paramètres de préfixe, choisissez l\'onglet approprié ci-dessus pour faire les mises à jour, alors<strong> cliquez sur "Enregistrer"</strong>, puis revenez à la<strong> «Code Bulk Produit Generator"</strong> onglet et cliquez sur le bouton "Remplacer" ci-dessous.</p><br> 
-<p>Cliquez sur le "<strong> Remplacez</strong>" bouton pour réinitialiser votre code de produit sur tous les produits dans le magasin.</p> 
-<p><br><strong> AVERTISSEMENT</strong>: Changements<strong> sont<u> irréversible</u> et ne<U> se produisent pour votre ID actuel de l\'entreprise</u></strong> 
-Si vous n\'êtes pas sûr de ce que vous faites, s\'il vous plaît une sauvegarde de votre base de données en premier lieu, avant de faire ces changements.</P><br><br';
-	
+ 	$info['en'] = '
+ <p>If you <strong>do not</strong> want to change your current prefix settings and wish to update your records, then click the "Replace" button below</p>
+ <p>If you <strong>do</strong> want to change your prefix settings, choose the appropriate tab above to make updates, then <strong>click "Save"</strong>, then navigate back to the <strong>"Bulk Product Code Generator"</strong> tab and click the "Replace" button below.</p><br>
+ <p>Click the "<strong>Replace</strong>" button to reset your product code on ALL products in the store.</p>
+ <p>Click the "<strong>Replace</strong>" button to reset your product code on ALL products in the store. <strong>If your connection timed out, enter in the product ID</strong> that was last updated to continue where updates left off.</p>
+ <p><br><strong>WARNING</strong>: <strong>Changes are <u>irreversible</u> and only <u>occur for your current company ID.</u></strong>
+ If you are unsure of what you are doing, please backup your database first, before making these changes.</p><br><br>';
+ 	
+ 	$info['el'] = '
+ <p>An<strong> den</strong> thélete na alláxete tis tréchouses rythmíseis próthema sas kai thélete na eni̱meró̱sete ta archeía sas, sti̱ synécheia, kánte klik sto koumpí "Antikatástasi̱" káto̱ apó</p>
+ <p>An<strong> kánete</strong> thélete na alláxete tis rythmíseis próthema sas, epiléxte ti̱n katálli̱li̱ kartéla parapáno̱ gia na kánoun eni̱meró̱seis kai, sti̱ synécheia kánte klik sto koumpí<strong>"Apothí̱kef̱si̱"</strong>, sti̱ synécheia, metaveíte píso̱ sto<strong>" Mazikí̱ Ko̱dikós Generator"</strong> kartéla kai kánte klik sto "Antikatástasi̱ " koumpí parakáto̱.</p><br>
+ <p>Kánte klik sto "<strong> Antikatástasi̱</strong>" koumpí gia na epanaférete ton ko̱dikó tou proïóntos sas se óla ta proïónta sto katásti̱ma.</p>
+ <p>Kánte klik sto "<strong> Antikatástasi̱</strong>" koumpí gia na epanaférete ton ko̱dikó tou proïóntos sas se óla ta proïónta sto katásti̱ma. <strong>An i̱ sýndesí̱ sas timed out , eiságete to ID tou proïóntos </strong> pou eni̱meró̱thi̱ke gia telef̱taía forá gia na synechíso̱ ekeí pou stamáti̱se eni̱meró̱seis .</p>
+ <p><br><strong> PROEIDOPOII̱SI̱</strong>: <strong> allagés eínai mi̱ anastrépsimes<u></u> kai móno<u> symveí gia ti̱n tréchousa taf̱tóti̱ta ti̱s etaireías sas</u></strong>
+ Eán den eíste sígouroi gia to ti kánete, parakaló̱ backup ti̱s vási̱s dedoméno̱n sas pró̱ta, prin apó ti̱n pragmatopoíi̱si̱ af̱tó̱n to̱n allagó̱n.</P><br><br';
+ 
+ 	$info['es'] =  '
+ <p>Si<strong> qué no</strong> que desee cambiar la configuración de prefijos actuales y desea actualizar sus datos, a continuación, haga clic en el botón "Cambiar" por debajo de</p> 
+ <p>Si<strong> haces</strong> que desee cambiar la configuración de prefijo, seleccione la ficha correspondiente de arriba para hacer cambios, entonces<strong> clic en "Guardar"</strong>, a continuación, vaya de nuevo a la<strong>"Código Bulk Producto Generador"</strong> y haga clic en el botón "Cambiar" a continuación.</p><br>
+ <p>Haga clic en la "<strong> Reemplace</strong>" botón para restablecer el código de producto en todos los productos en el almacén.</p> 
+ <p>Haga clic en la "<strong> Reemplace</strong>" botón para restablecer el código de producto en todos los productos en el almacén. <strong>Si su tiempo de conexión agotado, introduzca el ID de producto </strong> que se actualizó por última para continuar donde las actualizaciones dejaron.</p> 
+ <p><strong> ADVERTENCIA</strong>: Cambios<strong> son<u> irreversible</u> y sólo<U> producen para su empresa actual ID</u></strong> 
+ Si no está seguro de lo que estás haciendo, por favor copia de seguridad de su base de datos en primer lugar, antes de realizar estos cambios.</P><br><br';
+ 	
+ 	$info['fr'] = '
+ <p>Si vous ne le faites pas<strong></strong> vous souhaitez modifier vos paramètres de préfixe actuelles et souhaitez mettre à jour vos dossiers, puis cliquez sur le bouton "Remplacer" ci-dessous</p> 
+ <p>Si vous faites<strong></strong> vous souhaitez modifier vos paramètres de préfixe, choisissez l\'onglet approprié ci-dessus pour faire les mises à jour, alors<strong> cliquez sur "Enregistrer"</strong>, puis revenez à la<strong> «Code Bulk Produit Generator"</strong> onglet et cliquez sur le bouton "Remplacer" ci-dessous.</p><br> 
+ <p>Cliquez sur le "<strong> Remplacez</strong>" bouton pour réinitialiser votre code de produit sur tous les produits dans le magasin.</p> 
+ <p>Cliquez sur le "<strong> Remplacez</strong>" bouton pour réinitialiser votre code de produit sur tous les produits dans le magasin. <strong>Si votre connexion a expiré, entrez l\'ID de produit </strong> qui a été mis à jour pour continuer où les mises à jour se sont arrêtés.</p> 
+ <p><br><strong> AVERTISSEMENT</strong>: Changements<strong> sont<u> irréversible</u> et ne<U> se produisent pour votre ID actuel de l\'entreprise</u></strong> 
+ Si vous n\'êtes pas sûr de ce que vous faites, s\'il vous plaît une sauvegarde de votre base de données en premier lieu, avant de faire ces changements.</P><br><br';
+		
 	return html_entity_decode($info[$store_lang]);
 }//fn_tsppcg_display_product_analysis
 
@@ -708,7 +721,7 @@ function fn_tsppcg_update_product_codes($product_ids, $display_output, $return_u
 			
 			if ($display_output)
 			{
-				echo "$counter. Updated <strong>{$name}</strong> product code from <strong>[$current_product_code]</strong> to <strong>[{$product_data['product_code']}]</strong>...<br>\n";
+				echo "$counter. Updated <strong>{$name}</strong> (ID: $product_id) product code from <strong>[$current_product_code]</strong> to <strong>[{$product_data['product_code']}]</strong>...<br>\n";
 				fn_flush();
 				
 				usleep(500000); // sleep for half a second
