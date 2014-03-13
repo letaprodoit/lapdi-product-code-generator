@@ -4,7 +4,7 @@
  *
  * @package		TSP Product Code Generator CS-Cart Addon
  * @filename	fn.product_code_generator.php
- * @version		1.1.2.2
+ * @version		1.1.2.3
  * @author		Sharron Denice, The Software People, LLC on 2013/02/09
  * @copyright	Copyright © 2013 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
  * @license		Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported (http://creativecommons.org/licenses/by-nc-nd/3.0/)
@@ -142,9 +142,6 @@ function fn_tsppcg_info_replace_product_codes ()
  ***********/
 function fn_tsppcg_display_product_analysis()
 {
-	// changes made for 3x development
-	$product_count = db_get_field("SELECT COUNT(*) FROM ?:products WHERE `company_id` = ?i", COMPANY_ID);
-		
 	$info = array();
 	
 	$info['EN'] = '
