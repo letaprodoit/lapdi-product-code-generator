@@ -4,7 +4,7 @@
  *
  * @package		TSP Product Code Generator CS-Cart Addon
  * @filename	fn.product_code_generator.php
- * @version		2.1.3.2
+ * @version		2.1.4.1
  * @author		Sharron Denice, The Software People, LLC on 2013/02/09
  * @copyright	Copyright © 2013 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
  * @license		Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported (http://creativecommons.org/licenses/by-nc-nd/3.0/)
@@ -51,7 +51,7 @@ function fn_tsppcg_info_update_product_codes ()
 	$store_lang =  (DEFAULT_LANGUAGE != null) ? DEFAULT_LANGUAGE : CART_LANGUAGE;
 	$company_id = Registry::get('runtime.company_id') ? Registry::get('runtime.company_id') : 1;
 	$product_count = db_get_field("SELECT COUNT(*) FROM ?:products WHERE `company_id` = ?i", $company_id);
-	$invalid_product_count = fn_tspcg_count_invalid_product_codes($company_id);
+	$invalid_product_count = fn_tsppcg_count_invalid_product_codes($company_id);
 	
 	$field = array();
 
@@ -458,7 +458,7 @@ function fn_tsppcg_get_category_names($cat_ids){
 *
 ***********/
 
-function fn_tspcg_count_invalid_product_codes($company_id)
+function fn_tsppcg_count_invalid_product_codes($company_id)
 {
 	$invalid_count = 0;
 	
@@ -503,7 +503,7 @@ function fn_tspcg_count_invalid_product_codes($company_id)
 * Function to get the product_ids of products that have invalid product codes
 *
 ***********/
-function fn_tspcg_get_invalid_product_code_ids($company_id)
+function fn_tsppcg_get_invalid_product_code_ids($company_id)
 {
 	$invalid_products = array();
 	
