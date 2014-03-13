@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="TSP Product Code Generator" default="copy_all" basedir=".">
-    <property name="dir_3x"  value="tsp-product-code-generator-4x3x" /> <!-- directory with 4x changes and 3x structure -->
     <property name="name"  value="tsp_product_code_generator" />
     <property name="test_site"  value="/Users/SharronDenice/Sites/_testsites/cscart_latest" />
     <property name="live_site"  value="/Users/SharronDenice/Sites/www.thesoftwarepeople.com" />
     
     <!-- Fileset for addon files -->
-    <fileset dir="${project.basedir}/app/addons" id="4x_addonfiles">
+    <fileset dir="${project.basedir}/app/addons" id="addonfiles">
         <include name="${name}/*" />
         <include name="${name}/controllers/*" />
         <include name="${name}/controllers/backend/*" />
@@ -14,7 +13,7 @@
     </fileset>
 
     <!-- Fileset for all files -->
-    <fileset dir="${project.basedir}" id="4x_allfiles">
+    <fileset dir="${project.basedir}" id="allfiles">
         <include name="LICENSE" />
         <include name="README.md" />
         <include name="install.php" />
@@ -23,86 +22,26 @@
         <include name="app/addons/${name}/controllers/backend/*" />
         <include name="app/addons/${name}/lib/*" />
     </fileset>
- 
-    <!-- Fileset for addon files -->
-    <fileset dir="${project.basedir}" id="3x_infofiles">
-        <include name="LICENSE" />
-        <include name="README.md" />
-        <include name="install.php" />
-    </fileset>
-    
-    <!-- Fileset for 4x addon files -->
-    <fileset dir="${project.basedir}/app/addons" id="3x_same_dir">
-        <include name="${name}/*" />
-        <include name="${name}/lib/*" />
-     </fileset>
-     
-     <!-- Fileset for 4x addon files -->
-    <fileset dir="${project.basedir}/app/addons/${name}/controllers/backend/" id="3x_admin_dir">
-        <include name="*" />
-    </fileset>
-
-   <!-- Fileset for 3x addon files -->
-    <fileset dir="../${dir_3x}/addons" id="3x_addonfiles">
-        <include name="${name}/*" />
-        <include name="${name}/controllers/*" />
-        <include name="${name}/controllers/admin/*" />
-        <include name="${name}/lib/*" />
-    </fileset>
-    
-    
-    <!-- Fileset for all 3x files -->
-    <fileset dir="../${dir_3x}" id="3x_allfiles">
-        <include name="LICENSE" />
-        <include name="README.md" />
-        <include name="install.php" />
-        <include name="addons/${name}/*" />
-        <include name="addons/${name}/controllers/*" />
-        <include name="addons/${name}/controllers/admin/*" />
-        <include name="addons/${name}/lib/*" />
-    </fileset>
     
     <!-- copy_all Target -->
     <target name="copy_all" description="copy all files target">
         
-       <!-- Copying 4x dir to 3x  directory... -->
-        <echo message="Copying 4x dir to 3x  directory..." />
-        <copy todir="../${dir_3x}">
-            <fileset refid="3x_infofiles" />
-        </copy>
-        <copy todir="../${dir_3x}/addons">
-            <fileset refid="3x_same_dir" />
-         </copy>
-        <copy todir="../${dir_3x}/addons/${name}/controllers/admin">
-            <fileset refid="3x_admin_dir" />
-        </copy>
-        
         <!-- Copying to TEST 4x project -->
         <echo message="Copying ADDON files to TEST 4x project..." />
         <copy todir="${test_site}/app/addons">
-            <fileset refid="4x_addonfiles" />
+            <fileset refid="addonfiles" />
         </copy>
         <!-- Copying to LIVE 4x project -->
         <echo message="Copying ADDON files to LIVE 4x project..." />
         <copy todir="${live_site}/app/addons">
-            <fileset refid="4x_addonfiles" />
-        </copy>
-        
-        <!-- Copying to TEST 3x project -->
-        <echo message="Copying ADDON files to TEST 3x project..." />
-        <copy todir="${test_site}/addons">
-            <fileset refid="3x_addonfiles" />
+            <fileset refid="addonfiles" />
         </copy>
         
         <!-- Creating ZIP file -->
         <delete file="../../${name}_4x.zip" />
         <zip destfile="../../${name}_4x.zip">
-            <fileset refid="4x_allfiles" />
+            <fileset refid="allfiles" />
         </zip>
-        
-        <!--  DO NOT create a zip file for 3x since there are MAJOR changes
-        since 4x only copy the struture and compare with previous 3x
-        commit to add in newest updates -->
-        
+         
     </target>
 </project>

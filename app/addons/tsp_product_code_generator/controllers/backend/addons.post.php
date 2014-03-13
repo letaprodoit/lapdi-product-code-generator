@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' and $mode == 'update'
 	
 	if ($bulk_update)
 	{
-		$invalid_product_ids = fn_tspcg_get_invalid_product_code_ids($company_id);
+		$invalid_product_ids = fn_tsppcg_get_invalid_product_code_ids($company_id);
 		fn_tsppcg_update_product_codes($invalid_product_ids, true, $return_url);
 	}
 	else if ($bulk_replace)
