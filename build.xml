@@ -2,8 +2,9 @@
 <project name="TSP Product Code Generator" default="copy_all" basedir=".">
     <property name="dir_3x"  value="tsp-product-code-generator-3x" />
     <property name="name"  value="tsp_product_code_generator" />
-    <property name="test_site"  value="/Users/SharronDenice/Sites/_testsites/cscart_302" />
-
+    <property name="test_site1"  value="/Users/SharronDenice/Sites/_testsites/cscart_302" />
+    <property name="test_site2"  value="/Users/SharronDenice/Sites/_testsites/cscart_306" />
+    
     <!-- Fileset for 3x addon files -->
     <fileset dir="${project.basedir}/addons" id="addonfiles">
         <include name="${name}/*" />
@@ -33,8 +34,14 @@
         </copy>
          
         <!-- Copying to TEST 3x project -->
-        <echo message="Copying ADDON files to TEST 3x project..." />
-        <copy todir="${test_site}/addons">
+        <echo message="Copying ADDON files to TEST 1 3x project..." />
+        <copy todir="${test_site1}/addons">
+            <fileset refid="addonfiles" />
+        </copy>       
+         
+        <!-- Copying to TEST 3x project -->
+        <echo message="Copying ADDON files to TEST 2 3x project..." />
+        <copy todir="${test_site2}/addons">
             <fileset refid="addonfiles" />
         </copy>
         
