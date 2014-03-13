@@ -4,7 +4,7 @@
  *
  * @package		TSP Product Code Generator CS-Cart Addon
  * @filename	fn.product_code_generator.php
- * @version		1.1.2.1
+ * @version		1.1.2.2
  * @author		Sharron Denice, The Software People, LLC on 2013/02/09
  * @copyright	Copyright © 2013 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
  * @license		Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported (http://creativecommons.org/licenses/by-nc-nd/3.0/)
@@ -148,7 +148,7 @@ function fn_tsppcg_display_product_analysis()
 	$info = array();
 	
 	$info['EN'] = '
-<pIf you <strong>do not</strong> want to change your current prefix settings and wish to update your records, then click the "Replace" button below</p>
+<p>If you <strong>do not</strong> want to change your current prefix settings and wish to update your records, then click the "Replace" button below</p>
 <p>If you <strong>do</strong> want to change your prefix settings, choose the appropriate tab above to make updates, then <strong>click "Save"</strong>, then navigate back to the <strong>"Bulk Product Code Generator"</strong> tab and click the "Replace" button below.</p><br>
 <p>Click the "<strong>Replace</strong>" button to reset your product code on ALL products in the store.</p>
 <p><br><strong>WARNING</strong>: <strong>Changes are <u>irreversible</u> and only <u>occur for your current company ID.</u></strong>
