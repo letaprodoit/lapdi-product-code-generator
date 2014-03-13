@@ -2,7 +2,6 @@
 <project name="TSP Product Code Generator" default="copy_all" basedir=".">
     <property name="dir_3x"  value="tsp-product-code-generator-4x3x" /> <!-- directory with 4x changes and 3x structure -->
     <property name="name"  value="tsp_product_code_generator" />
-    <property name="test_site_3x"  value="/Users/SharronDenice/Sites/_testsites/cscart_302" />
     <property name="test_site"  value="/Users/SharronDenice/Sites/_testsites/cscart_latest" />
     <property name="live_site"  value="/Users/SharronDenice/Sites/www.thesoftwarepeople.com" />
     
