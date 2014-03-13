@@ -4,7 +4,7 @@
  *
  * @package		TSP Product Code Generator CS-Cart Addon
  * @filename	fn.product_code_generator.php
- * @version		1.1.2.4
+ * @version		1.1.2.5
  * @author		Sharron Denice, The Software People, LLC on 2013/02/09
  * @copyright	Copyright © 2013 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
  * @license		Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported (http://creativecommons.org/licenses/by-nc-nd/3.0/)
@@ -108,7 +108,7 @@ function fn_tsppcg_info_replace_product_codes ()
         <div class="controls">
         	<input class="btn btn-primary " 
 				onclick="javascript:document.getElementById(\'addon_option_tsp_product_code_generator_bulk_replace\').value = true;"
-			 	type="submit" name="dispatch[addons.update]" value="%s" %s>
+			 	type="submit" name="dispatch[addons.update]" value="%s">
 			<input type="hidden" id="addon_option_tsp_product_code_generator_bulk_replace"
 				name="addon_option_tsp_product_code_generator_bulk_replace" />
            	<div class="right replace-for-all"></div>
@@ -126,7 +126,7 @@ function fn_tsppcg_info_replace_product_codes ()
 	$info['ES']['button'] = "Reemplazar";
 	$info['FR']['button'] = "Remplacer";
 			
-	return sprintf($field_html, $info[DEFAULT_LANGUAGE]['label'], $info[DEFAULT_LANGUAGE]['button'], $enabled);
+	return sprintf($field_html, $info[DEFAULT_LANGUAGE]['label'], $info[DEFAULT_LANGUAGE]['button']);
 }//end fn_tsppcg_replace_all_product_codes
 
 
