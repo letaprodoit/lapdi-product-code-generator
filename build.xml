@@ -44,8 +44,8 @@
         </copy>
         
         <!-- Creating ZIP file -->
-        <delete file="../../${name}_3x_1111.zip" />
-        <zip destfile="../../${name}_3x_1111.zip">
+        <delete file="../../${name}_3x_LS.zip" />
+        <zip destfile="../../${name}_3x_LS.zip">
             <fileset refid="allfiles" />
         </zip>        
     </target>
