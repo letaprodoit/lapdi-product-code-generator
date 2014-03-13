@@ -2,12 +2,20 @@
 <addon scheme="2.0">
 	<id>tsp_product_code_generator</id>
 	<name>The Software People - Product Code Generator</name>
-	<description>The Software People (TSP) Product Code Generator generates a product code for new products or for any product that does not have one. Code generation is based on a set of combiniations specified in settings.</description>
-	<version>1.1.1</version>
+	<description>The Software People (TSP) Product Code Generator generates a product code for new products or for any product that does not have one. Code generation is based on a set of combinations specified in settings.</description>
+	<version>1.1.2</version>
 	<priority>1111000011</priority>
 	<position>0</position>
 	<status>active</status>
 	<default_language>EN</default_language>
+    <translations>
+        <item lang="ES" for="name">El Pueblo de Software - Product Code Generator</item>
+        <item lang="EL" for="name">Oi ánthro̱poi Logismikoú - Product Code Generator</item>
+        <item lang="FR" for="name">Les gens Logiciels - Code produit Générateur</item>                          
+        <item lang="ES" for="description">Los Software People (TSP) de producto generador de código genera un código de producto para los productos nuevos o de cualquier producto que no tiene uno. La generación de código se basa en un conjunto de combinaciones especificadas en los ajustes.</item>
+        <item lang="EL" for="description">Oi Kó̱dika Logismikó ánthro̱poi (TSP) Proïón genní̱tria parágei éna ko̱dikó proïóntos gia néa proïónta í̱ gia opoiodí̱pote proïón pou den échei mía. Parago̱gí̱ kó̱dika vasízetai se mia seirá syndyasmó̱n pou kathorízontai stis rythmíseis.</item>
+        <item lang="FR" for="description">Le code du logiciel populaire (TSP) produit Generator génère un code de produit pour de nouveaux produits ou pour tout produit qui ne possède pas un. La génération de code est basée sur un ensemble de combinaisons spécifiées dans les paramètres.</item>                          
+    </translations>
 	<language_variables>
 		<item lang="EN" id="tsp_product_code_generator">The Software People - Product Code Generator</item>
         <item lang="ES" id="tsp_product_code_generator">El Pueblo de Software - Product Code Generator</item>
