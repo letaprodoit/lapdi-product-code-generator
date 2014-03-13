@@ -4,7 +4,7 @@
  *
  * @package		TSP Product Code Generator CS-Cart Addon
  * @filename	fn.product_code_generator.php
- * @version		1.1.2.5
+ * @version		1.1.3.1
  * @author		Sharron Denice, The Software People, LLC on 2013/02/09
  * @copyright	Copyright © 2013 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
  * @license		Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported (http://creativecommons.org/licenses/by-nc-nd/3.0/)
@@ -49,14 +49,14 @@ function fn_tsppcg_info_update_product_codes ()
 {
 	// changes made for 3x development
 	$product_count = db_get_field("SELECT COUNT(*) FROM ?:products WHERE `company_id` = ?i", COMPANY_ID);
-	$invalid_product_count = fn_tspcg_count_invalid_product_codes(COMPANY_ID);
+	$invalid_product_count = fn_tsppcg_count_invalid_product_codes(COMPANY_ID);
 	
 	$field = array();
 
 	$field_html = '
 	<div class="control-group setting-wide tsp_product_code_generator">
         <label for="addon_option_tsp_product_code_generator_bulk_update" class="control-label ">%s:</label>
-        <div class="controls">
+        <div class="submit-button cm-button-main">
         	<input class="btn btn-primary " 
 				onclick="javascript:document.getElementById(\'addon_option_tsp_product_code_generator_bulk_update\').value = true;"
 			 	type="submit" name="dispatch[addons.update]" value="%s" %s>
@@ -105,7 +105,7 @@ function fn_tsppcg_info_replace_product_codes ()
 	$field_html = '
 	<div class="control-group setting-wide tsp_product_code_generator">
         <label for="addon_option_tsp_product_code_generator_bulk_replace" class="control-label ">%s:</label>
-        <div class="controls">
+        <div class="submit-button cm-button-main">
         	<input class="btn btn-primary " 
 				onclick="javascript:document.getElementById(\'addon_option_tsp_product_code_generator_bulk_replace\').value = true;"
 			 	type="submit" name="dispatch[addons.update]" value="%s">
@@ -450,7 +450,7 @@ function fn_tsppcg_get_category_names($cat_ids){
 *
 ***********/
 
-function fn_tspcg_count_invalid_product_codes($company_id)
+function fn_tsppcg_count_invalid_product_codes($company_id)
 {
 	$invalid_count = 0;
 	
@@ -495,7 +495,7 @@ function fn_tspcg_count_invalid_product_codes($company_id)
 * Function to get the product_ids of products that have invalid product codes
 *
 ***********/
-function fn_tspcg_get_invalid_product_code_ids($company_id)
+function fn_tsppcg_get_invalid_product_code_ids($company_id)
 {
 	$invalid_products = array();
 	
