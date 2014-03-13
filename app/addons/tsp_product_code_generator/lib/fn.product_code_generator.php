@@ -113,7 +113,7 @@ function fn_tsppcg_info_replace_product_codes ()
         <div class="controls">
         	<input class="btn btn-primary " 
 				onclick="javascript:document.getElementById(\'addon_option_tsp_product_code_generator_bulk_replace\').value = true;"
-			 	type="submit" name="dispatch[addons.update]" value="%s" %s>
+			 	type="submit" name="dispatch[addons.update]" value="%s">
 			<input type="hidden" id="addon_option_tsp_product_code_generator_bulk_replace"
 				name="addon_option_tsp_product_code_generator_bulk_replace" />
            	<div class="right replace-for-all"></div>
@@ -130,13 +130,8 @@ function fn_tsppcg_info_replace_product_codes ()
 	$info['el']['button'] = "Antikatástasi̱";
 	$info['es']['button'] = "Reemplazar";
 	$info['fr']['button'] = "Remplacer";
-	
-	$enabled = "";
-	// Company ID must be set to a non-null value for 4x dev
-	if (is_null($company_id) || $product_count == 0)
-			$enabled = "disabled";
-	
-	return sprintf($field_html, $info[$store_lang]['label'], $info[$store_lang]['button'], $enabled);
+		
+	return sprintf($field_html, $info[$store_lang]['label'], $info[$store_lang]['button']);
 }//end fn_tsppcg_replace_all_product_codes
 
 
