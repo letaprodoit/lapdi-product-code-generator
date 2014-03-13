@@ -4,7 +4,7 @@
  *
  * @package		TSP Product Code Generator CS-Cart Addon
  * @filename	fn.product_code_generator.php
- * @version		1.1.2.3
+ * @version		1.1.2.4
  * @author		Sharron Denice, The Software People, LLC on 2013/02/09
  * @copyright	Copyright © 2013 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
  * @license		Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported (http://creativecommons.org/licenses/by-nc-nd/3.0/)
@@ -125,12 +125,7 @@ function fn_tsppcg_info_replace_product_codes ()
 	$info['EL']['button'] = "Antikatástasi̱";
 	$info['ES']['button'] = "Reemplazar";
 	$info['FR']['button'] = "Remplacer";
-		
-	$enabled = "";
-	// Company ID can be null in 3x dev
-	if ($product_count == 0)
-			$enabled = "disabled";
-	
+			
 	return sprintf($field_html, $info[DEFAULT_LANGUAGE]['label'], $info[DEFAULT_LANGUAGE]['button'], $enabled);
 }//end fn_tsppcg_replace_all_product_codes
 
