@@ -4,7 +4,7 @@
  *
  * @package		TSP Product Code Generator CS-Cart Addon
  * @filename	fn.product_code_generator.php
- * @version		2.1.4
+ * @version		2.1.5
  * @author		Sharron Denice, The Software People, LLC on 2013/02/09
  * @copyright	Copyright © 2013 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
  * @license		Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported (http://creativecommons.org/licenses/by-nc-nd/3.0/)
@@ -69,15 +69,15 @@ function fn_tsppcg_info_update_product_codes ()
    </div>';
 					
 	$info = array();
-	$info['en']['label'] = "Update Invalid Product Codes";
-	$info['el']['label'] = "Eni̱méro̱si̱ Ákyra ko̱dikoí proïónto̱n";
-	$info['es']['label'] = "Actualización de Códigos de producto no válidas";
-	$info['fr']['label'] = "Mettre à jour des codes de produit non valide";
+	$info['en']['label'] = __("tsppcg_update_invalid",array(),'en');
+	$info['es']['label'] = __("tsppcg_update_invalid",array(),'es');
+	$info['el']['label'] = __("tsppcg_update_invalid",array(),'el');
+	$info['fr']['label'] = __("tsppcg_update_invalid",array(),'fr');
 	
-	$info['en']['button'] = "Update %s";
-	$info['el']['button'] = "Eni̱méro̱si̱ %s";
-	$info['es']['button'] = "Actualizar %s";
-	$info['fr']['button'] = "Mettre à jour %s";
+	$info['en']['button'] = __("tsppcg_update",array(),'en');
+	$info['es']['button'] = __("tsppcg_update",array(),'es');
+	$info['el']['button'] = __("tsppcg_update",array(),'el');
+	$info['fr']['button'] = __("tsppcg_update",array(),'fr');
 	
 	foreach ($info as $lang => $fields)
 	{
@@ -123,15 +123,15 @@ function fn_tsppcg_info_replace_product_codes ()
   	</div>';
 	
     $info = array();
-	$info['en']['label'] = "Replace All Product Codes";
-	$info['el']['label'] = "Antikatastí̱ste óloi oi ko̱dikoí proïónto̱n";
-	$info['es']['label'] = "Vuelva a colocar todos los códigos de producto";
-	$info['fr']['label'] = "Remplacer tous les codes de produit";
+	$info['en']['label'] = __("tsppcg_replace_invalid",array(),'en');
+	$info['es']['label'] = __("tsppcg_replace_invalid",array(),'es');
+	$info['el']['label'] = __("tsppcg_replace_invalid",array(),'el');
+	$info['fr']['label'] = __("tsppcg_replace_invalid",array(),'fr');
 	
-	$info['en']['button'] = "Replace %s";
-	$info['el']['button'] = "Antikatástasi̱ %s";
-	$info['es']['button'] = "Reemplazar %s";
-	$info['fr']['button'] = "Remplacer %s";
+	$info['en']['button'] = __("tsppcg_replace",array(),'en');
+	$info['es']['button'] = __("tsppcg_replace",array(),'es');
+	$info['el']['button'] = __("tsppcg_replace",array(),'el');
+	$info['fr']['button'] = __("tsppcg_replace",array(),'fr');
 	
 	foreach ($info as $lang => $fields)
 	{
@@ -175,14 +175,14 @@ Click the "<strong>Replace</strong>" button to reset your product code on all pr
 If you are unsure of what you are doing, please backup your database first, before making these changes.</p>';
 	
 	$info['el'] = '
-<p>stigmí̱ échete <font color="red"><strong>%s</strong></font> tou <strong>%s</strong> ta proïónta sto katásti̱má sas, pou den pli̱roún tis rythmíseis próthema sas.<br>
-<p>An <strong>den</strong> thélete na alláxete tis tréchouses rythmíseis próthema sas kai thélete na eni̱meró̱sete ta archeía sas, sti̱ synécheia, patí̱ste to katálli̱lo koumpí parakáto̱</p>
-<p>An <strong>kánete</strong> thélete na alláxete tis rythmíseis próthema sas, epiléxte ti̱n katálli̱li̱ kartéla parapáno̱ gia na kánoun eni̱meró̱seis kai, sti̱ synécheia kánte klik sto koumpí <strong>"Apothí̱kef̱si̱"</strong>, sti̱ synécheia, perii̱gi̱theíte píso̱ sto <strong>"Mazikí̱ Ko̱dikós Generator"</strong> kartéla kai kánte klik sto parakáto̱ to katálli̱lo koumpí.</p>
-<p>Parakaló̱ na eíste vévaios na epiléxei ti̱n katálli̱li̱ epilogí̱...</p>
-<p>Kánte klik sto "<strong>Eni̱méro̱si̱</strong>" koumpí gia na eni̱meró̱sete móno ta proïónta me ta thémata.<br>
-Kánte klik sto koumpí "<strong>Antikatastí̱ste</strong>" gia na epanaférete ton ko̱dikó tou proïóntos sas se óla ta proïónta sto katásti̱ma.</p>
-<p><br><strong>PROEIDOPOII̱SI̱</strong>: <strong>allagés eínai <u>mi̱ anastrépsimes</u> kai móno <u>symveí gia ti̱n tréchousa taf̱tóti̱ta ti̱s etaireías sas</u></strong>
-Eán den eíste sígouroi gia to ti kánete, parakaló̱ backup ti̱s vási̱s dedoméno̱n sas pró̱ta, prin apó ti̱n pragmatopoíi̱si̱ af̱tó̱n to̱n allagó̱n.</p>';
+<p>Αυτή τη στιγμή διαθέτετε <font color="red"><strong>%s</strong></font> Της <strong>%s</strong> προϊόντα στο κατάστημά σας ότι δεν σας ικανοποιούν πρόθεμα ρυθμίσεις.</p>
+<p>Εάν δεν θέλετε να αλλάξετε τις τρέχουσες ρυθμίσεις προθέματος και θέλετε να ενημερώσετε τα αρχεία σας, στη συνέχεια, κάντε κλικ στο κατάλληλο κουμπί παρακάτω</p>
+<p>εάν θέλετε να αλλάξετε το πρόθεμα ρυθμίσεις, επιλέξτε την κατάλληλη καρτέλα παραπάνω για να ενημερώσεις, στη συνέχεια, κάντε κλικ στο "<strong>Αποθήκευση</strong>", και στη συνέχεια πλοήγηση προς τα πίσω για να την "<strong>χύμα Κωδικός Προϊόντος γεννήτρια</strong>" Γλωττίδα και κάντε κλικ στο κατάλληλο κουμπί παρακάτω.</p>
+<p>Παρακαλούμε βεβαιωθείτε ότι επιλέξατε την κατάλληλη επιλογή ....</p>
+<p>Κάντε κλικ στο κουμπί "<strong>Ενημερωμένη έκδοση</strong>" κουμπί για να ενημερώσετε μόνο τα προϊόντα με θέματα.<br>
+  Κάντε κλικ στο κουμπί "<strong>Αντικατάσταση</strong>" κουμπί για να επαναφέρετε τον κωδικό προϊόντος για όλα τα προϊόντα στην αποθήκη.<br>
+</p>
+<p><strong>ΠΡΟΕΙΔΟΠΟΊΗΣΗ: Οι αλλαγές είναι μη αναστρέψιμη και συμβαίνει μόνο για την τρέχουσα εταιρεία ID.</strong> Εάν δεν είστε σίγουροι για το τι κάνετε, παρακαλούμε δημιουργήστε αντίγραφα ασφαλείας δεδομένων πρώτα, πριν από τις τροποποιήσεις αυτές.</p>';
 
 	$info['es'] =  '
 <p>Actualmente tienes <font color="red"><strong>%s</strong></font> de <strong>%s</strong> productos en su tienda que no cumplan con la configuración de prefijo.<br>
@@ -197,10 +197,10 @@ Si no está seguro de lo que estás haciendo, por favor copia de seguridad de su
 	$info['fr'] = '
 <p>Vous avez actuellement <font color="red"><strong>%s</strong></font> de <strong>%s</strong> produits dans votre magasin qui ne répondent pas à vos paramètres de préfixe.<br>
 <p>Si vous <strong>ne</strong> voulez pas changer vos paramètres de préfixe actuelles et souhaitez mettre à jour vos dossiers, puis cliquez sur le bouton approprié ci-dessous</p>
-<p>Si vous <strong>faites</strong> vous souhaitez modifier vos paramètres de préfixe, choisissez l\'onglet approprié ci-dessus pour faire les mises à jour, alors <strong>cliquez sur &quot;Enregistrer &quot;</strong>, puis revenez à la <strong > &quot; En vrac le produit générateur de code &quot;</strong>onglet et cliquez sur le bouton approprié ci-dessous .</p>
+<p>Si vous <strong>faites</strong> vous souhaitez modifier vos paramètres de préfixe, choisissez l\'onglet approprié ci-dessus pour faire les mises à jour, alors <strong>cliquez sur "Enregistrer "</strong>, puis revenez à la <strong > "En vrac le produit générateur de code "</strong>onglet et cliquez sur le bouton approprié ci-dessous .</p>
 <p>S\'il vous plaît assurez-vous de choisir l\'option appropriée...</p>		
 <p>Cliquez sur le "<strong>mise à jour</strong>" pour mettre à jour uniquement les produits qui ont des problèmes.<br>
-Cliquez sur le bouton &quot; <strong>Remplacez</strong> &quot; pour réinitialiser votre code de produit sur tous les produits dans le magasin .</p>
+Cliquez sur le bouton "<strong>Remplacez</strong>" pour réinitialiser votre code de produit sur tous les produits dans le magasin .</p>
 <p><br><strong>AVERTISSEMENT</strong>: Changements <strong>sont <u>irréversible</u> et ne <u>se produisent pour votre ID actuel de l\'entreprise</u></strong>
 Si vous n\'êtes pas sûr de ce que vous faites, s\'il vous plaît une sauvegarde de votre base de données en premier lieu, avant de faire ces changements .</p>';
 	
