@@ -22,24 +22,40 @@
 		<item lang="en" id="tsppcg_update_invalid">Update Invalid Product Codes</item>
 		<item lang="en" id="tsppcg_replace">Replace %s</item>
 		<item lang="en" id="tsppcg_replace_invalid">Replace Invalid Product Codes</item>
+		<item lang="en" id="tsppcg_patient">Please be patient while %s records are updated...</item>
+		<item lang="en" id="tsppcg_updated">%s. Updated %s product code from %s to %s...</item>
+		<item lang="en" id="tsppcg_done">Done.</item>
+		<item lang="en" id="tsppcg_continue">Continue</item>
 		
         <item lang="es" id="tsp_product_code_generator">El Software - Producto Generador de Código</item>
 		<item lang="es" id="tsppcg_update">Actualizar %s</item>
 		<item lang="es" id="tsppcg_update_invalid">Actualizar los códigos de producto no válido</item>
 		<item lang="es" id="tsppcg_replace">Sustituir %s</item>
 		<item lang="es" id="tsppcg_replace_invalid">Sustituir los códigos de producto no válido</item>
+		<item lang="es" id="tsppcg_patient">Por favor sea paciente mientras %s se actualizan los registros...</item>
+		<item lang="es" id="tsppcg_updated">%s. Actualizado %s código de producto %s a %s...</item>
+		<item lang="es" id="tsppcg_done">Hecho.</item>
+		<item lang="es" id="tsppcg_continue">Continuar</item>
         
 		<item lang="el" id="tsp_product_code_generator">Το λογισμικό τους ανθρώπους - Κωδικός Προϊόντος γεννήτριας</item>
 		<item lang="el" id="tsppcg_update">Update %s</item>
 		<item lang="el" id="tsppcg_update_invalid">Update Invalid Product Codes</item>
 		<item lang="el" id="tsppcg_replace">Replace %s</item>
 		<item lang="el" id="tsppcg_replace_invalid">Replace Invalid Product Codes</item>
+		<item lang="el" id="tsppcg_patient">Παρακαλώ περιμένετε ενώ %s εγγραφές ενημέρωση...</item>
+		<item lang="el" id="tsppcg_updated">%s. Ενημέρωση %s κωδικός προϊόντος από %s σε %s...</item>
+		<item lang="el" id="tsppcg_done">Κάνει.</item>
+		<item lang="el" id="tsppcg_continue">Συνέχεια</item>
         
 		<item lang="fr" id="tsp_product_code_generator">Les gens Logiciels - Code Produit Générateur</item>       		
 		<item lang="fr" id="tsppcg_update">Mise à jour %s</item>
 		<item lang="fr" id="tsppcg_update_invalid">Mise à jour non valide Codes produit</item>
 		<item lang="fr" id="tsppcg_replace">Remplacer %s</item>
 		<item lang="fr" id="tsppcg_replace_invalid">Remplacer incorrecte Codes produit</item>
+		<item lang="fr" id="tsppcg_patient">Veuillez être patient pendant %s les enregistrements sont mis à jour ...</item>
+		<item lang="fr" id="tsppcg_updated">%s. Mise à jour %s code produit de %s vers %s ...</item>
+		<item lang="fr" id="tsppcg_done">Fait.</item>
+		<item lang="fr" id="tsppcg_continue">Continuer</item>
 	</language_variables>
 	<tab_order>prepend</tab_order>
 	<settings>
@@ -364,7 +380,7 @@
 						<name>Maximum Number of Chars for Product Name Prefix</name>
                         <translations>
                             <item lang="es" for="name">Número máximo de Chars de Productos Prefijo</item>
-                            <item lang="el" for="name">Mégistos arithmós Chars gia Ónoma Proïóntos próthema</item>
+                            <item lang="el" for="name">Μέγιστος αριθμός χαρακτήρες για όνομα προϊόντος πρόθεμα</item>
                             <item lang="fr" for="name">Nombre maximum de Chars pour Nom du produit préfixe</item>
                         </translations>                                             												
 						<type>input</type>
