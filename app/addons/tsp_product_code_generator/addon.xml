@@ -3,24 +3,43 @@
 	<id>tsp_product_code_generator</id>
 	<name>The Software People - Product Code Generator (Large Store)</name>
 	<description>The Software People (TSP) Product Code Generator generates a product code for new products or for any product that does not have one. Code generation is based on a set of combinations specified in settings.</description>
-	<version>2.1.4.3</version>
+	<version>2.1.4.4</version>
 	<priority>1111000011</priority>
 	<position>0</position>
 	<status>active</status>
 	<default_language>en</default_language>
     <translations>
-        <item lang="es" for="name">El Pueblo de Software - Product Code Generator (Large Store)</item>
-        <item lang="el" for="name">Oi ánthro̱poi Logismikoú - Product Code Generator (Large Store)</item>
+        <item lang="es" for="name">El Pueblo de Software - Product Code Generator (Gran tienda)</item>
+        <item lang="el" for="name">Το λογισμικό τους ανθρώπους - Κωδικός Προϊόντος γεννήτριας (Μεγάλο κατάστημα)</item>
         <item lang="fr" for="name">Les gens Logiciels - Code produit Générateur (Grand Magasin)</item>                          
         <item lang="es" for="description">Los Software People (TSP) de producto generador de código genera un código de producto para los productos nuevos o de cualquier producto que no tiene uno. La generación de código se basa en un conjunto de combinaciones especificadas en los ajustes.</item>
-        <item lang="el" for="description">Oi Kó̱dika Logismikó ánthro̱poi (TSP) Proïón genní̱tria parágei éna ko̱dikó proïóntos gia néa proïónta í̱ gia opoiodí̱pote proïón pou den échei mía. Parago̱gí̱ kó̱dika vasízetai se mia seirá syndyasmó̱n pou kathorízontai stis rythmíseis.</item>
+        <item lang="el" for="description">Το λογισμικό τους ανθρώπους (κουταλάκια) κωδικός προϊόντος γεννήτρια παράγει ένα προϊόν κωδικός για νέα προϊόντα ή για οποιοδήποτε προϊόν που δεν έχουν μία. Κωδικός γενιά βασίζεται σε ένα σύνολο συνδυασμών που αναφέρονται στις ρυθμίσεις</item>
         <item lang="fr" for="description">Le code du logiciel populaire (TSP) produit Generator génère un code de produit pour de nouveaux produits ou pour tout produit qui ne possède pas un. La génération de code est basée sur un ensemble de combinaisons spécifiées dans les paramètres.</item>                          
     </translations>
 	<language_variables>
-		<item lang="en" id="tsp_product_code_generator">The Software People - Product Code Generator (Large Store)</item>
-        <item lang="es" id="tsp_product_code_generator">El Pueblo de Software - Product Code Generator (Large Store)</item>
-        <item lang="el" id="tsp_product_code_generator">Oi ánthro̱poi Logismikoú - Product Code Generator (Large Store)</item>
-        <item lang="fr" id="tsp_product_code_generator">Les gens Logiciels - Code produit Générateur (Grand Magasin)</item>       		
+	        <item lang="en" id="tsp_product_code_generator">The Software People - Product Code Generator (Large Store)</item>
+		<item lang="en" id="tsppcg_update">Update %s</item>
+		<item lang="en" id="tsppcg_update_invalid">Update Invalid Product Codes</item>
+		<item lang="en" id="tsppcg_replace">Replace %s</item>
+		<item lang="en" id="tsppcg_replace_invalid">Replace Invalid Product Codes</item>
+
+                <item lang="es" id="tsp_product_code_generator">El Software - Producto Generador de Código (Gran tienda)</item>
+		<item lang="es" id="tsppcg_update">Actualizar %s</item>
+		<item lang="es" id="tsppcg_update_invalid">Actualizar los códigos de producto no válido</item>
+		<item lang="es" id="tsppcg_replace">Sustituir %s</item>
+		<item lang="es" id="tsppcg_replace_invalid">Sustituir los códigos de producto no válido</item>
+
+                <item lang="el" id="tsp_product_code_generator">Το λογισμικό τους ανθρώπους - Κωδικός Προϊόντος γεννήτριας (Μεγάλο κατάστημα)</item>
+		<item lang="el" id="tsppcg_update">Update %s</item>
+		<item lang="el" id="tsppcg_update_invalid">Update Invalid Product Codes</item>
+		<item lang="el" id="tsppcg_replace">Replace %s</item>
+		<item lang="el" id="tsppcg_replace_invalid">Replace Invalid Product Codes</item>
+
+                <item lang="fr" id="tsp_product_code_generator">Les gens Logiciels - Code Produit Générateur (Grand Magasin)</item>       		
+		<item lang="fr" id="tsppcg_update">Mise à jour %s</item>
+		<item lang="fr" id="tsppcg_update_invalid">Mise à jour non valide Codes produit</item>
+		<item lang="fr" id="tsppcg_replace">Remplacer %s</item>
+		<item lang="fr" id="tsppcg_replace_invalid">Remplacer incorrecte Codes produit</item>
 	</language_variables>
 	<tab_order>prepend</tab_order>
 	<settings>
@@ -29,7 +48,7 @@
 				<name>Prefix Settings</name>		
                 <translations>
                     <item lang="es" for="name">Prefix Settings</item>
-                    <item lang="el" for="name">Rythmíseis prothématos</item>
+                    <item lang="el" for="name">Πρόθεμα ρυθμίσεις</item>
                     <item lang="fr" for="name">Configuración de prefijo</item>
                 </translations>
 				<items>
@@ -37,7 +56,7 @@
 						<name>First Prefix for Product Code</name>
 		                <translations>
 		                    <item lang="es" for="name">Primera Prefijo para Código de producto</item>
-		                    <item lang="el" for="name">Pró̱ti̱ próthema gia to Ko̱dikós</item>
+		                    <item lang="el" for="name">Πρώτο πρόθεμα για κωδικό προϊόντος</item>
 		                    <item lang="fr" for="name">Première préfixe pour le code produit</item>
 		                </translations>						
 						<type>selectbox</type>
@@ -47,7 +66,7 @@
 								<name>Auto-Generated</name>
 		                        <translations>
 		                            <item lang="es">Autogenerado</item>
-		                            <item lang="el">Auto-Generated</item>
+		                            <item lang="el">Αυτόματη δημιουργία</item>
 		                            <item lang="fr">Auto-Création</item>
 		                        </translations>                     																
 							</item>
@@ -55,7 +74,7 @@
 								<name>Product ID</name>
                                 <translations>
                                     <item lang="es">Identificación del producto</item>
-                                    <item lang="el">Anagno̱ristikó proïóntos</item>
+                                    <item lang="el">Αναγνωριστικό Προϊόντος</item>
                                     <item lang="fr">ID du produit</item>
                                 </translations>                                                                                     																
 							</item>
@@ -63,7 +82,7 @@
                                 <name>First Letters of Company Name</name>
                                 <translations>
                                     <item lang="es">Primeras letras del nombre de la empresa</item>
-                                    <item lang="el">Pró̱ta grámmata tou onómatos Etaireías</item>
+                                    <item lang="el">Πρώτα γράμματα του ονόματος εταιρείας</item>
                                     <item lang="fr">Premières lettres de Nom de l'entreprise</item>
                                 </translations>                                                                                                                                                                                                                                                                                     
                             </item>
@@ -71,7 +90,7 @@
                                 <name>First Letters of Product Name</name>
                                 <translations>
                                     <item lang="es">Primeras letras del nombre del producto</item>
-                                    <item lang="el">Pró̱ta grámmata tou onómatos proïóntos</item>
+                                    <item lang="el">Πρώτα γράμματα του ονόματος προϊόντος</item>
                                     <item lang="fr">Premières lettres du nom du produit</item>
                                 </translations>                                                                                                                                                                                                                                                                                     
                             </item>
@@ -79,7 +98,7 @@
                                 <name>First Letters of Category Name</name>
                                 <translations>
                                     <item lang="es">Primeras letras del nombre de categoría</item>
-                                    <item lang="el">Pró̱ti̱ Epistolés Ónoma kati̱gorías</item>
+                                    <item lang="el">Πρώτα γράμματα του Όνομα κατηγορίας</item>
                                     <item lang="fr">Premières lettres de Nom de la catégorie</item>
                                 </translations>                                                                                                                                                                                                                                                                                     
                             </item>
@@ -89,7 +108,7 @@
 						<name>Second Prefix for Product Code</name>
                         <translations>
                             <item lang="es" for="name">Segundo Prefijo para Código de producto</item>
-                            <item lang="el" for="name">Déf̱teri̱ próthema gia to Ko̱dikós</item>
+                            <item lang="el" for="name">Δεύτερη πρόθεμα για κωδικό προϊόντος</item>
                             <item lang="fr" for="name">Deuxième préfixe pour le code produit</item>
                         </translations>                     
   						<type>selectbox</type>
@@ -99,7 +118,7 @@
 								<name>None</name>
                                 <translations>
                                     <item lang="es">ninguno</item>
-                                    <item lang="el">kanénas</item>
+                                    <item lang="el">Κανένα</item>
                                     <item lang="fr">aucun</item>
                                 </translations>                                                                                     																
 							</item>
@@ -107,7 +126,7 @@
 								<name>Auto-Generated</name>
                                 <translations>
                                     <item lang="es">Autogenerado</item>
-                                    <item lang="el">Auto-Generated</item>
+                                    <item lang="el">Αυτόματη δημιουργία</item>
                                     <item lang="fr">Auto-Création</item>
                                 </translations>                                                                                     																
 							</item>
@@ -115,7 +134,7 @@
 								<name>Product ID</name>
                                 <translations>
                                     <item lang="es">Identificación del producto</item>
-                                    <item lang="el">Anagno̱ristikó proïóntos</item>
+                                    <item lang="el">Αναγνωριστικό Προϊόντος</item>
                                     <item lang="fr">ID du produit</item>
                                 </translations>                                                                                                                                                     																
 							</item>
@@ -123,7 +142,7 @@
 								<name>First Letters of Company Name</name>
                                 <translations>
                                     <item lang="es">Primeras letras del nombre de la empresa</item>
-                                    <item lang="el">Pró̱ta grámmata tou onómatos Etaireías</item>
+                                    <item lang="el">Πρώτα γράμματα του ονόματος εταιρείας</item>
                                     <item lang="fr">Premières lettres de Nom de l'entreprise</item>
                                 </translations>                                                                                                                                                                                                                     																
 							</item>
@@ -131,7 +150,7 @@
 								<name>First Letters of Product Name</name>
                                 <translations>
                                     <item lang="es">Primeras letras del nombre del producto</item>
-                                    <item lang="el">Pró̱ta grámmata tou onómatos proïóntos</item>
+                                    <item lang="el">Πρώτα γράμματα του ονόματος προϊόντος</item>
                                     <item lang="fr">Premières lettres du nom du produit</item>
                                 </translations>                                                                                                                                                                                                                     																
 							</item>
@@ -139,17 +158,17 @@
 								<name>First Letters of Category Name</name>
                                 <translations>
                                     <item lang="es">Primeras letras del nombre de categoría</item>
-                                    <item lang="el">Pró̱ti̱ Epistolés Ónoma kati̱gorías</item>
+                                    <item lang="el">Πρώτα γράμματα του Όνομα κατηγορίας</item>
                                     <item lang="fr">Premières lettres de Nom de la catégorie</item>
                                 </translations>                                                                                                                                                                                                                     																
 							</item>
 						</variants>
 					</item>
 					<item id="third_prefix_type">
-						<name>Third Prefix for Product Code</name>
+					<name>Third Prefix for Product Code</name>
                         <translations>
                             <item lang="es" for="name">Tercer Prefijo para Código de producto</item>
-                            <item lang="el" for="name">Tríton próthema gia to Ko̱dikós</item>
+                            <item lang="el" for="name">Τρίτη πρόθεμα για κωδικό προϊόντος</item>
                             <item lang="fr" for="name">Troisième préfixe pour le code produit</item>
                         </translations>                     
   						<type>selectbox</type>
@@ -159,7 +178,7 @@
                                 <name>None</name>
                                 <translations>
                                     <item lang="es">ninguno</item>
-                                    <item lang="el">kanénas</item>
+                                    <item lang="el">Κανένα</item>
                                     <item lang="fr">aucun</item>
                                 </translations>                                                                                                                                                     
                             </item>
@@ -167,7 +186,7 @@
 								<name>Auto-Generated</name>
                                 <translations>
                                     <item lang="es">Autogenerado</item>
-                                    <item lang="el">Auto-Generated</item>
+                                    <item lang="el">Αυτόματη δημιουργία</item>
                                     <item lang="fr">Auto-Création</item>
                                 </translations>                                                                                     																
 							</item>
@@ -175,7 +194,7 @@
 								<name>Product ID</name>
                                 <translations>
                                     <item lang="es">Identificación del producto</item>
-                                    <item lang="el">Anagno̱ristikó proïóntos</item>
+                                    <item lang="el">Αναγνωριστικό Προϊόντος</item>
                                     <item lang="fr">ID du produit</item>
                                 </translations>                                                                                                                                                     																
 							</item>
@@ -183,7 +202,7 @@
                                 <name>First Letters of Company Name</name>
                                 <translations>
                                     <item lang="es">Primeras letras del nombre de la empresa</item>
-                                    <item lang="el">Pró̱ta grámmata tou onómatos Etaireías</item>
+                                    <item lang="el">Πρώτα γράμματα του ονόματος εταιρείας</item>
                                     <item lang="fr">Premières lettres de Nom de l'entreprise</item>
                                 </translations>                                                                                                                                                                                                                                                                                     
                             </item>
@@ -191,7 +210,7 @@
                                 <name>First Letters of Product Name</name>
                                 <translations>
                                     <item lang="es">Primeras letras del nombre del producto</item>
-                                    <item lang="el">Pró̱ta grámmata tou onómatos proïóntos</item>
+                                    <item lang="el">Πρώτα γράμματα του ονόματος προϊόντος</item>
                                     <item lang="fr">Premières lettres du nom du produit</item>
                                 </translations>                                                                                                                                                                                                                                                                                     
                             </item>
@@ -199,7 +218,7 @@
                                 <name>First Letters of Category Name</name>
                                 <translations>
                                     <item lang="es">Primeras letras del nombre de categoría</item>
-                                    <item lang="el">Pró̱ti̱ Epistolés Ónoma kati̱gorías</item>
+                                    <item lang="el">Πρώτα γράμματα του Όνομα κατηγορίας</item>
                                     <item lang="fr">Premières lettres de Nom de la catégorie</item>
                                 </translations>                                                                                                                                                                                                                                                                                     
                             </item>
@@ -209,7 +228,7 @@
 						<name>Last Prefix for Product Code</name>
                         <translations>
                             <item lang="es" for="name">Última Prefijo para Código de producto</item>
-                            <item lang="el" for="name">Telef̱taía próthema gia to Ko̱dikós</item>
+                            <item lang="el" for="name">Τελευταία πρόθεμα για κωδικό προϊόντος</item>
                             <item lang="fr" for="name">Prefix dernier pour le code produit</item>
                         </translations>                     						
 						<type>selectbox</type>
@@ -219,7 +238,7 @@
                                 <name>None</name>
                                 <translations>
                                     <item lang="ES">ninguno</item>
-                                    <item lang="EL">kanénas</item>
+                                    <item lang="EL">Κανένα</item>
                                     <item lang="FR">aucun</item>
                                 </translations>                                                                                                                                                     
                             </item>
@@ -227,7 +246,7 @@
 								<name>Auto-Generated</name>
                                 <translations>
                                     <item lang="es">Autogenerado</item>
-                                    <item lang="el">Auto-Generated</item>
+                                    <item lang="el">Αυτόματη δημιουργία</item>
                                     <item lang="fr">Auto-Création</item>
                                 </translations>                                                                                     																
 							</item>
@@ -235,7 +254,7 @@
 								<name>Product ID</name>
                                 <translations>
                                     <item lang="es">Identificación del producto</item>
-                                    <item lang="el">Anagno̱ristikó proïóntos</item>
+                                    <item lang="el">Αναγνωριστικό Προϊόντος</item>
                                     <item lang="fr">ID du produit</item>
                                 </translations>                                                                                                                                                     																
 							</item>
@@ -243,7 +262,7 @@
                                 <name>First Letters of Company Name</name>
                                 <translations>
                                     <item lang="es">Primeras letras del nombre de la empresa</item>
-                                    <item lang="el">Pró̱ta grámmata tou onómatos Etaireías</item>
+                                    <item lang="el">Πρώτα γράμματα του ονόματος εταιρείας</item>
                                     <item lang="fr">Premières lettres de Nom de l'entreprise</item>
                                 </translations>                                                                                                                                                                                                                                                                                     
                             </item>
@@ -251,7 +270,7 @@
                                 <name>First Letters of Product Name</name>
                                 <translations>
                                     <item lang="es">Primeras letras del nombre del producto</item>
-                                    <item lang="el">Pró̱ta grámmata tou onómatos proïóntos</item>
+                                    <item lang="el">Πρώτα γράμματα του ονόματος προϊόντος</item>
                                     <item lang="fr">Premières lettres du nom du produit</item>
                                 </translations>                                                                                                                                                                                                                                                                                     
                             </item>
@@ -259,7 +278,7 @@
                                 <name>First Letters of Category Name</name>
                                 <translations>
                                     <item lang="es">Primeras letras del nombre de categoría</item>
-                                    <item lang="el">Pró̱ti̱ Epistolés Ónoma kati̱gorías</item>
+                                    <item lang="el">Πρώτα γράμματα του Όνομα κατηγορίας</item>
                                     <item lang="fr">Premières lettres de Nom de la catégorie</item>
                                 </translations>                                                                                                                                                                                                                                                                                     
                             </item>
@@ -270,16 +289,16 @@
 			<section id="generated_prefix_settings">
 				<name>Generated Prefix Settings</name>
                 <translations>
-                    <item lang="el" for="name">Di̱miourgi̱méno prothématos Rythmíseis</item>
                     <item lang="es" for="name">Configuración de prefijos generados</item>
+                    <item lang="el" for="name">Δημιουργούνται πρόθεμα ρυθμίσεις</item>
                     <item lang="fr" for="name">Paramètres préfixe générés</item>
                 </translations>
 				<items>
 					<item id="seperator">
 						<name>Product Code Separator</name>
                         <translations>
-                            <item lang="el" for="name">Ko̱dikós Diacho̱ristikó</item>
                             <item lang="es" for="name">Código del producto Separador</item>
+                            <item lang="el" for="name">Κωδικός προϊόντος διαχωριστή</item>
                             <item lang="fr" for="name">Code produit Separator</item>
                         </translations>                                             
 						<type>input</type>
@@ -288,8 +307,8 @@
 					<item id="prefix_auto_gen_len">
 						<name>Maximum Number of Chars for Autogenerated Prefix</name>
 		                <translations>
-		                    <item lang="el" for="name">Mégistos arithmós Chars gia Auto Generated próthema</item>
 		                    <item lang="es" for="name">Máximo número de caracteres para el prefijo Generado Auto</item>
+		                    <item lang="el" for="name">Μέγιστος αριθμός χαρακτήρες για αυτοδύναμη πρόθεμα</item>
 		                    <item lang="fr" for="name">Nombre maximum de Chars pour préfixe Création automatique</item>
 		                </translations>												
 						<type>input</type>
@@ -298,8 +317,8 @@
 					<item id="prefix_auto_gen_type">
 						<name>Type of Chars for Autogenerated Prefix</name>
                         <translations>
-                            <item lang="el" for="name">Eídos Chars gia Auto Generated próthema</item>
                             <item lang="es" for="name">Tipo de Chars para Prefijo Generado Auto</item>
+                            <item lang="el" for="name">Τύπος χαρακτήρες για αυτοδύναμη πρόθεμα</item>
                             <item lang="fr" for="name">Type de Chars pour préfixe Création automatique</item>
                         </translations>                                             
 						<type>selectbox</type>
@@ -308,16 +327,16 @@
 							<item id="mixed">
 								<name>Mixed (Numbers/Chars)</name>
                                 <translations>
-                                    <item lang="es">Mixta (Números / Chars)</item>
-                                    <item lang="el">Miktí̱ ( Arithmoí / Charaktí̱res )</item>
-                                    <item lang="fr">Mixte (chiffres / Chars)</item>
+                                    <item lang="es">Mixta (Números/Chars)</item>
+                                    <item lang="el">Μικτά (αριθμοί/χαρακτήρες)</item>
+                                    <item lang="fr">Mixte (chiffres/Chars)</item>
                                 </translations>                                                                                                                                                                                                                                                                                     																
 							</item>
 							<item id="numbers">
 								<name>Numbers Only</name>
 	                             <translations>
                                     <item lang="es">Sólo números</item>
-                                    <item lang="el">arithmoí Móno</item>
+                                    <item lang="el">Μόνο αριθμούς</item>
                                     <item lang="fr">Seuls les numéros</item>
                                 </translations>                                                                                                                                                                                                                                                                                     														
 							</item>
@@ -325,7 +344,7 @@
 								<name>Chars Only</name>
                                 <translations>
                                     <item lang="es">chars Sólo</item>
-                                    <item lang="el">Móno charaktí̱res</item>
+                                    <item lang="el">Χαρακτήρες μόνο</item>
                                     <item lang="fr">chars Seulement</item>
                                 </translations>                                                                                                                                                                                                                                                                                     																
 							</item>
@@ -334,8 +353,8 @@
 					<item id="prefix_company_name_len">
 						<name>Maximum Number of Chars for the Company Name</name>
                         <translations>
-                            <item lang="el" for="name">Mégistos arithmós Charaktí̱res gia to ónoma ti̱s etaireías</item>
                             <item lang="es" for="name">Máximo número de caracteres para el nombre de compañía</item>
+                            <item lang="el" for="name">Μέγιστος αριθμός χαρακτήρες για το όνομα της εταιρείας</item>
                             <item lang="fr" for="name">Nombre maximum de Chars pour le Nom de l'entreprise</item>
                         </translations>                                             
 						<type>input</type>
@@ -344,8 +363,8 @@
 					<item id="prefix_product_name_len">
 						<name>Maximum Number of Chars for Product Name Prefix</name>
                         <translations>
-                            <item lang="el" for="name">Mégistos arithmós Chars gia Ónoma Proïóntos próthema</item>
                             <item lang="es" for="name">Número máximo de Chars de Productos Prefijo</item>
+                            <item lang="el" for="name">Μέγιστος αριθμός χαρακτήρες για όνομα προϊόντος πρόθεμα</item>
                             <item lang="fr" for="name">Nombre maximum de Chars pour Nom du produit préfixe</item>
                         </translations>                                             												
 						<type>input</type>
@@ -354,8 +373,8 @@
 					<item id="prefix_category_name_len">
 						<name>Maximum Number of Chars for Category Name Prefix</name>
                         <translations>
-                            <item lang="el" for="name">Mégistos arithmós Charaktí̱res gia ti̱n kati̱goría Ónoma próthema</item>
                             <item lang="es" for="name">Máximo número de caracteres para la categoría Prefijo de nombre</item>
+                            <item lang="el" for="name">Μέγιστος αριθμός χαρακτήρες για όνομα προϊόντος πρόθεμα</item>
                             <item lang="fr" for="name">Nombre maximum de Chars pour Nom de la catégorie préfixe</item>
                         </translations>                                             												
 						<type>input</type>
@@ -367,7 +386,7 @@
                 <name>Bulk Product Code Generator</name>        
                 <translations>
                     <item lang="es" for="name">Bulk Producto Code Generator</item>
-                    <item lang="el" for="name">Ko̱dikós Proïóntos Genní̱tria Bulk</item>
+                    <item lang="el" for="name">Χύμα Κωδικός Προϊόντος γεννήτριας</item>
                     <item lang="fr" for="name">Code de produit en vrac Générateur</item>
                 </translations>
                 <items>
@@ -375,7 +394,7 @@
                         <name>Instructions</name>
                         <translations>
                             <item lang="es" for="name">Análisis</item>
-                            <item lang="el" for="name">Instrucciones</item>
+                            <item lang="el" for="name">Οδηγίες Χρήσης</item>
                             <item lang="fr" for="name">Instructions</item>
                         </translations>                     
                         <type>header</type>
@@ -389,7 +408,7 @@
                         <name>Options</name>
                         <translations>
                             <item lang="es" for="name">Opciones</item>
-                            <item lang="el" for="name">Epilogés</item>
+                            <item lang="el" for="name">Επιλογές</item>
                             <item lang="fr" for="name">les Options</item>
                         </translations>                     
                         <type>header</type>
@@ -397,9 +416,9 @@
                    <item id="starting_product_id">
                         <name>Starting Product ID</name>
                         <translations>
-                            <item lang="EL" for="name">Xekinó̱ntas Ko̱dikós proïóntos</item>
-                            <item lang="ES" for="name">A partir Identificación del producto</item>
-                            <item lang="FR" for="name">À partir ID de produit</item>
+                            <item lang="es" for="name">A partir Identificación del producto</item>
+                            <item lang="el" for="name">Ξεκινώντας αναγνωριστικό προϊόντος</item>
+                            <item lang="fr" for="name">À partir ID de produit</item>
                         </translations>                                             
                         <type>input</type>
                     </item>
