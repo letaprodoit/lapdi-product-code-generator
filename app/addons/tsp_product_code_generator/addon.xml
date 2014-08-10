@@ -17,28 +17,28 @@
         <item lang="fr" for="description">Le code du logiciel populaire (TSP) produit Generator génère un code de produit pour de nouveaux produits ou pour tout produit qui ne possède pas un. La génération de code est basée sur un ensemble de combinaisons spécifiées dans les paramètres.</item>                          
     </translations>
 	<language_variables>
-	        <item lang="en" id="tsp_product_code_generator">The Software People - Product Code Generator (Large Store)</item>
-		<item lang="en" id="tsppcg_update">Update %s</item>
+	    <item lang="en" id="tsp_product_code_generator">The Software People - Product Code Generator (Large Store)</item>
+		<item lang="en" id="tsppcg_update">Update</item>
 		<item lang="en" id="tsppcg_update_invalid">Update Invalid Product Codes</item>
-		<item lang="en" id="tsppcg_replace">Replace %s</item>
+		<item lang="en" id="tsppcg_replace">Replace</item>
 		<item lang="en" id="tsppcg_replace_invalid">Replace Invalid Product Codes</item>
 
-                <item lang="es" id="tsp_product_code_generator">El Software - Producto Generador de Código (Gran tienda)</item>
-		<item lang="es" id="tsppcg_update">Actualizar %s</item>
+        <item lang="es" id="tsp_product_code_generator">El Software - Producto Generador de Código (Gran tienda)</item>
+		<item lang="es" id="tsppcg_update">Actualizar</item>
 		<item lang="es" id="tsppcg_update_invalid">Actualizar los códigos de producto no válido</item>
-		<item lang="es" id="tsppcg_replace">Sustituir %s</item>
+		<item lang="es" id="tsppcg_replace">Sustituir</item>
 		<item lang="es" id="tsppcg_replace_invalid">Sustituir los códigos de producto no válido</item>
 
-                <item lang="el" id="tsp_product_code_generator">Το λογισμικό τους ανθρώπους - Κωδικός Προϊόντος γεννήτριας (Μεγάλο κατάστημα)</item>
-		<item lang="el" id="tsppcg_update">Update %s</item>
+        <item lang="el" id="tsp_product_code_generator">Το λογισμικό τους ανθρώπους - Κωδικός Προϊόντος γεννήτριας (Μεγάλο κατάστημα)</item>
+		<item lang="el" id="tsppcg_update">Update</item>
 		<item lang="el" id="tsppcg_update_invalid">Update Invalid Product Codes</item>
-		<item lang="el" id="tsppcg_replace">Replace %s</item>
+		<item lang="el" id="tsppcg_replace">Replace</item>
 		<item lang="el" id="tsppcg_replace_invalid">Replace Invalid Product Codes</item>
 
-                <item lang="fr" id="tsp_product_code_generator">Les gens Logiciels - Code Produit Générateur (Grand Magasin)</item>       		
-		<item lang="fr" id="tsppcg_update">Mise à jour %s</item>
+        <item lang="fr" id="tsp_product_code_generator">Les gens Logiciels - Code Produit Générateur (Grand Magasin)</item>       		
+		<item lang="fr" id="tsppcg_update">Mise à jour</item>
 		<item lang="fr" id="tsppcg_update_invalid">Mise à jour non valide Codes produit</item>
-		<item lang="fr" id="tsppcg_replace">Remplacer %s</item>
+		<item lang="fr" id="tsppcg_replace">Remplacer</item>
 		<item lang="fr" id="tsppcg_replace_invalid">Remplacer incorrecte Codes produit</item>
 	</language_variables>
 	<tab_order>prepend</tab_order>

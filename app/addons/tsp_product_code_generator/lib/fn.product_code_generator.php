@@ -160,7 +160,7 @@ function fn_tsppcg_display_product_analysis()
  <p>If you <strong>do not</strong> want to change your current prefix settings and wish to update your records, then click the "Replace" button below</p>
  <p>If you <strong>do</strong> want to change your prefix settings, choose the appropriate tab above to make updates, then <strong>click "Save"</strong>, then navigate back to the <strong>"Bulk Product Code Generator"</strong> tab and click the "Replace" button below.</p><br>
  <p>Click the "<strong>Replace</strong>" button to reset your product code on ALL products in the store.</p>
- <p>Click the "<strong>Replace</strong>" button to reset your product code on ALL products in the store. <strong>If your connection timed out, enter in the product ID</strong> that was last updated to continue where updates left off.</p>
+ <p><strong>If your connection timed out, enter in the product ID</strong> that was last updated to continue where updates left off.</p>
  <p><br><strong>WARNING</strong>: <strong>Changes are <u>irreversible</u> and only <u>occur for your current company ID.</u></strong>
  If you are unsure of what you are doing, please backup your database first, before making these changes.</p><br><br>';
  	
