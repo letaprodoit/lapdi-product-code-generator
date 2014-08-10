@@ -6,7 +6,7 @@
  * @filename	fn.product_code_generator.php
  * @version		2.1.5
  * @author		Sharron Denice, The Software People, LLC on 2013/02/09
- * @copyright	Copyright © 2013 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
+ * @copyright	Copyright © 2014 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
  * @license		Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported (http://creativecommons.org/licenses/by-nc-nd/3.0/)
  * @brief		Helper functions for addon
  * 
@@ -703,12 +703,13 @@ function fn_tsppcg_product_code_type_match($old_code, $new_code)
 function fn_tsppcg_update_product_codes($product_ids, $display_output, $return_url = null)
 {
 	$product_count = count($product_ids);
+	$store_lang = (DEFAULT_LANGUAGE != null) ? DEFAULT_LANGUAGE : CART_LANGUAGE;
 	
 	if ($product_count > 0)
 	{
 		if ($display_output)
 		{
-			echo "Please be patient while $product_count records are updated...<br><br><br>\n\n\n";
+			echo sprintf(__("tsppcg_patient",array(),$store_lang), $product_count)."<br><br><br>\n\n\n";
 			fn_flush();
 		}//end if
 		
@@ -742,7 +743,7 @@ function fn_tsppcg_update_product_codes($product_ids, $display_output, $return_u
 			
 			if ($display_output)
 			{
-				echo "$counter. Updated <strong>{$name}</strong> product code from <strong>[$current_product_code]</strong> to <strong>[{$product_data['product_code']}]</strong>...<br>\n";
+				echo sprintf(__("tsppcg_updated",array(),$store_lang), $counter, "<strong>{$name}</strong>", "<strong>[$current_product_code]</strong>", "<strong>[{$product_data['product_code']}]</strong>")."<br>\n";
 				fn_flush();
 				
 				usleep(500000); // sleep for half a second
@@ -752,10 +753,10 @@ function fn_tsppcg_update_product_codes($product_ids, $display_output, $return_u
 		
 		if ($display_output)
 		{
-			echo "<br><br>\n\nDone.";
+			echo "<br><br>\n\n".__("tsppcg_done",array(),$store_lang);
 			if ($return_url)
 			{
-				echo "..<a href='$return_url'>[Continue]</a>.";
+				echo "..<a href='$return_url'>[".__("tsppcg_continue",array(),$store_lang)."]</a>.";
 			}
 			fn_flush();
 			
