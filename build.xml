@@ -31,11 +31,6 @@
         <copy todir="${test_site}/app/addons">
             <fileset refid="addonfiles" />
         </copy>
-        <!-- Copying to LIVE 4x project -->
-        <echo message="Copying ADDON files to LIVE 4x project..." />
-        <copy todir="${live_site}/app/addons">
-            <fileset refid="addonfiles" />
-        </copy>
         
         <!-- Creating ZIP file -->
         <delete file="../../${name}_4x.zip" />
